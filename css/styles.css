@@ -333,37 +333,36 @@ a {
 .howto__list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 30px;
+  margin-left: 15px;
+  counter-reset: step;
 }
-
-.howto__step {
+.howto__list li {
   display: flex;
   position: relative;
-  padding: 30px 20px;
-  width: 90%;
+  padding: 30px;
+  align-items: center;
+  gap: 20px;
 }
-
-.howto__step-number {
+.howto__list li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: -15px;
+  border-radius: 100%;
+  background-color: #9356dc;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  left: -12px;
-  width: 30px;
-  height: 30px;
-  color: white;
-  font-size: 16px;
-  border-radius: 50%;
-  background-color: #9356dc;
 }
-
-.howto__step-btn {
-  display: flex;
-  justify-content: center;
-}
-.howto__step-btn i {
+.howto__list li i {
   opacity: 0.5;
+  width: 30px;
+  text-align: center;
 }
 
 .howto__step:hover {
