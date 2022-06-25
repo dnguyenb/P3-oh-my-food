@@ -10,55 +10,55 @@
         <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne qui permet aux utilisateurs de composer leur propre menu et réduire leur temps d&apos;attente dans les
 restaurants car leur menu est préparé à l&apos;avance. Plus de perte de temps à consulter la carte
 !">
-        <!-- adding favicon -->
         <link rel="shortcut icon" href="img/favicon/ohmyfood.ico" type="image/x-icon">
         <!-- adding font awesome -->
         <script src="https://kit.fontawesome.com/d39b49135d.js" crossorigin="anonymous"></script>
-        <!-- adding link to CSS stylesheet -->
         <link rel="stylesheet" href="/css/styles.css">
     </head>
 
     <body>
         <header>
-            <h1 class="header__logo">
+            <div class="header__logo">
                 <img src="/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood!" width="196" height="34">
-            </h1>
+            </div>
         </header>
 
         <main>
-            <section class="location">
-                <form action="#" method="post" class="location-form">
-                    <label for="place"><a href="#"><i class="fa-solid fa-location-dot location__icon"></i></a>
+
+            <section class="location-form">
+                <form action="#" method="post" class="location">
+                    <label for="location"><a href="#" class="location__label"><i
+                                class="fa-solid fa-location-dot location__icon"></i></a>
                     </label>
-                    <input type="search" id="place" name="place" placeholder="Paris, Belleville" autofocus>
+                    <input type="search" id="location" name="location" placeholder="Paris, Belleville"
+                        class="location__input" autofocus>
                 </form>
             </section>
 
             <section class="discover">
-                <h2 class="discover__title">Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d&apos;exception, sélectionnés par nos soins.</p>
+                <h1 class="discover__title">R&eacute;servez le menu qui vous convient</h1>
+                <p>D&eacute;couvrez des restaurants d&apos;exception, s&eacute;lectionn&eacute;s par nos soins.</p>
 
-                <button class="discover__btn" type="button">Explorer nos restaurants</button>
+                <button class="discover__btn btn" type="button">Explorer nos restaurants</button>
+
             </section>
 
             <section class="howto">
                 <h2 class="howto__title">Fonctionnement</h2>
-                <ol>
-                    <li class="howto__step">
+                <ol class="howto__list">
+                    <li class="howto__step btn">
                         <div class="howto__step-number">1</div>
                         <div class="howto__step-btn"><i
                                 class="fa-solid fa-mobile-screen-button howto__step-icon"></i><span>Choisissez un
                                 restaurant</span></div>
                     </li>
-
-                    <li class="howto__step">
+                    <li class="howto__step btn">
                         <div class="howto__step-number">2</div>
                         <div class="howto__step-btn"><i class="fa-solid fa-list-ul howto__step-icon"></i><span>Composez
                                 votre menu</span>
                         </div>
                     </li>
-
-                    <li class="howto__step">
+                    <li class="howto__step btn">
                         <div class="howto__step-number">3</div>
                         <div class="howto__step-btn"><i class="fa-solid fa-store howto__step-icon"></i><span>Dégustez au
                                 restaurant</span>
@@ -69,15 +69,12 @@ restaurants car leur menu est préparé à l&apos;avance. Plus de perte de temps
 
             <section class="restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
-
                 <div class="card-container">
-
-                    <a href="/Menus/la_palette_du_gout.html">
+                    <a href="/menus/la_palette_du_gout.html">
                         <div class="card">
                             <div class="new">Nouveau</div>
                             <img class="card__img" src="/img/restaurants/la_palette_du_gout.jpg"
                                 alt="Photo du restaurant La Palette du goût">
-
                             <div class="card__footer">
                                 <div class="card__txt">
                                     <h3>La palette du go&ucirc;t</h3>
@@ -89,13 +86,11 @@ restaurants car leur menu est préparé à l&apos;avance. Plus de perte de temps
                             </div>
                         </div>
                     </a>
-
-                    <a href="/Menus/la_note_enchantee.html">
+                    <a href="/menus/la_note_enchantee.html">
                         <div class="card">
                             <div class="new">Nouveau</div>
                             <img class="card__img" src="/img/restaurants/la_note_enchantee.jpg"
                                 alt="Photo du restaurant La note enchant&eacute;e">
-
                             <div class="card__footer">
                                 <div class="card__txt">
                                     <h3>La note enchant&eacute;e</h3>
@@ -107,12 +102,10 @@ restaurants car leur menu est préparé à l&apos;avance. Plus de perte de temps
                             </div>
                         </div>
                     </a>
-
-                    <a href="/Menus/a_la_francaise.html">
+                    <a href="/menus/a_la_francaise.html">
                         <div class="card">
                             <img class="card__img" src="/img/restaurants/a_la_francaise.jpg"
                                 alt="Photo du restaurant &Agrave; la française">
-
                             <div class="card__footer">
                                 <div class="card__txt">
                                     <h3>&Agrave; la fran&ccedil;aise</h3>
@@ -124,12 +117,10 @@ restaurants car leur menu est préparé à l&apos;avance. Plus de perte de temps
                             </div>
                         </div>
                     </a>
-
-                    <a href="/Menus/le_delice_des_sens.html">
+                    <a href="/menus/le_delice_des_sens.html">
                         <div class="card">
                             <img class="card__img" src="/img/restaurants/le_delice_des_sens.jpg"
                                 alt="Photo du restaurant Le d&eacute;lice des sens">
-
                             <div class="card__footer">
                                 <div class="card__txt">
                                     <h3>Le d&eacute;lice des sens</h3>
@@ -141,7 +132,6 @@ restaurants car leur menu est préparé à l&apos;avance. Plus de perte de temps
                             </div>
                         </div>
                     </a>
-
                 </div>
             </section>
         </main>
@@ -150,9 +140,13 @@ restaurants car leur menu est préparé à l&apos;avance. Plus de perte de temps
             <h2 class="footer__title">ohmyfood</h2>
             <ul>
                 <li><a class="footer__item" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+
                 <li><a class="footer__item" href="#"><i class="fa-solid fa-utensils"></i>Devenir partenaire</a></li>
+
                 <li><a class="footer__item" href="#">Mentions légales</a></li>
+
                 <li><a class="footer__mail" href="mailto:contact@ohmyfood.com">Contact</a></li>
+
             </ul>
         </footer>
     </body>

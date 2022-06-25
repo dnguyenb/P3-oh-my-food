@@ -1,0 +1,54 @@
+.howto {
+    margin: 0 30px 60px;
+
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+}
+
+.howto__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.howto__step {
+    display: flex;
+    position: relative;
+    padding: 30px 20px;
+    margin-left: 15px;
+}
+
+.howto__step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -12px;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    background-color: $color-primary;
+}
+
+.howto__step-btn {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+
+    & i {
+        width: 30px;
+        margin-inline: 10px;
+        opacity: 0.5;
+    }
+
+}
+
+.howto__step:hover {
+    box-shadow: 0 8px 20px #474747;
+    opacity: 0.85;
+}

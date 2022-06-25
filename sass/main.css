@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*********************************
+*             COLORS             *
+*********************************/
+/******************************** 
+*             FONTS             *
+********************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+
+.btn {
+  border: none;
+  border-radius: 25px;
+  width: 450px;
+  height: 105px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0 20px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(144, 143, 143, 0.7843137255);
+  }
+  .header__logo img {
+    max-width: 60%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #e4e4e4;
+  }
+  .location__label {
+    margin-left: 55px;
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  .location__input {
+    border: none;
+    background-color: #e4e4e4;
+    font-size: 18px;
+    padding-left: 5px;
+  }
+  .location__input::-moz-placeholder {
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    color: inherit;
+  }
+  .location__input:-ms-input-placeholder {
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    color: inherit;
+  }
+  .location__input::placeholder {
+    font-family: "roboto", sans-serif;
+    font-size: 18px;
+    color: inherit;
+  }
+}
+@media screen and (max-width: 768px) {
+  .discover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 40px;
+    row-gap: 25px;
+  }
+  .discover__title {
+    text-align: center;
+    word-wrap: break-word;
+    margin-top: 50px;
+  }
+  .discover p {
+    font-size: 20px;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .discover__btn {
+    border-radius: 50px;
+    margin-bottom: 50px;
+    height: 64px;
+    width: 70%;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  }
+}/*# sourceMappingURL=main.css.map */

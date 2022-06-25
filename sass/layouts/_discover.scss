@@ -1,0 +1,36 @@
+@media screen and (max-width: 768px) {
+	.discover {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 25px;
+		padding: 40px;
+		text-align: center;
+		word-wrap: break-word;
+		background-color: $color-bg-light;
+		margin-bottom: 60px;
+
+		& p {
+			opacity: 0.5;
+			font-size: 24px;
+		}
+
+		&__btn {
+			border-radius: 50px;
+			margin-bottom: 50px;
+			padding: 20px 30px;
+			color: #fff;
+			background: linear-gradient(to bottom right,
+					$color-secondary,
+					$color-primary);
+			box-shadow: 0 6px 15px #47474781;
+			/* a voir variable */
+			transition: box-shadow 500ms, opacity 800ms;
+		}
+
+		&__btn:hover {
+			box-shadow: 0 8px 20px #474747;
+			opacity: 0.85;
+		}
+	}
+}
