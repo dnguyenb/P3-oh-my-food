@@ -11,6 +11,7 @@
 .howto__list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 30px;
 }
 
@@ -18,7 +19,7 @@
     display: flex;
     position: relative;
     padding: 30px 20px;
-    margin-left: 15px;
+    width: 90%;
 }
 
 .howto__step-number {
@@ -37,15 +38,14 @@
 
 .howto__step-btn {
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: center;
 
     & i {
-        width: 30px;
-        margin-inline: 10px;
+        // width: 30px;
+        // margin-right: 10px;
         opacity: 0.5;
-    }
 
+    }
 }
 
 .howto__step:hover {

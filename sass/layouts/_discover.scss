@@ -1,4 +1,3 @@
-@media screen and (max-width: 768px) {
 	.discover {
 		display: flex;
 		flex-direction: column;
@@ -25,12 +24,13 @@
 					$color-primary);
 			box-shadow: 0 6px 15px #47474781;
 			/* a voir variable */
-			transition: box-shadow 500ms, opacity 800ms;
+			transition: all 1000ms;
 		}
 
 		&__btn:hover {
 			box-shadow: 0 8px 20px #474747;
-			opacity: 0.85;
+			background: linear-gradient(to bottom right,
+					lighten($color-secondary, 5%) 33%,
+					lighten($color-primary, 25%) 100%);
 		}
 	}
-}

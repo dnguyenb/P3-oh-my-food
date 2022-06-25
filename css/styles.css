@@ -255,78 +255,74 @@ a {
   box-shadow: 0 6px 15px rgba(71, 71, 71, 0.5058823529);
 }
 
-@media screen and (max-width: 768px) {
-  .header__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 35px 0 20px;
-    position: relative;
-    box-shadow: 0 2px 6px rgba(144, 143, 143, 0.7843137255);
-  }
-  .header__logo img {
-    max-width: 60%;
-    height: auto;
-    color: blue;
-  }
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0 20px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(144, 143, 143, 0.7843137255);
 }
-@media screen and (max-width: 768px) {
-  .location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: #e4e4e4;
-  }
-  .location__label {
-    margin-left: 65px;
-    margin-right: 15px;
-  }
-  .location__input {
-    border: none;
-    background-color: #e4e4e4;
-    font-size: 20px;
-    font-weight: 700;
-    padding-left: 5px;
-  }
-  .location__input::placeholder {
-    font-family: "roboto", sans-serif;
-    font-size: 20px;
-    color: inherit;
-    opacity: 0.7;
-  }
+.header__logo img {
+  max-width: 60%;
+  height: auto;
 }
-@media screen and (max-width: 768px) {
-  .discover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 25px;
-    padding: 40px;
-    text-align: center;
-    word-wrap: break-word;
-    background-color: #f2f2f2;
-    margin-bottom: 60px;
-  }
-  .discover p {
-    opacity: 0.5;
-    font-size: 24px;
-  }
-  .discover__btn {
-    border-radius: 50px;
-    margin-bottom: 50px;
-    padding: 20px 30px;
-    color: #fff;
-    background: linear-gradient(to bottom right, #ff79da, #9356dc);
-    box-shadow: 0 6px 15px rgba(71, 71, 71, 0.5058823529);
-    /* a voir variable */
-    transition: box-shadow 500ms, opacity 800ms;
-  }
-  .discover__btn:hover {
-    box-shadow: 0 8px 20px #474747;
-    opacity: 0.85;
-  }
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #e4e4e4;
 }
+.location__label {
+  margin-left: 65px;
+  margin-right: 15px;
+}
+.location__input {
+  border: none;
+  background-color: #e4e4e4;
+  font-size: 20px;
+  font-weight: 700;
+  padding-left: 5px;
+}
+.location__input::placeholder {
+  font-family: "roboto", sans-serif;
+  font-size: 20px;
+  color: inherit;
+  opacity: 0.7;
+}
+
+.discover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+  padding: 40px;
+  text-align: center;
+  word-wrap: break-word;
+  background-color: #f2f2f2;
+  margin-bottom: 60px;
+}
+.discover p {
+  opacity: 0.5;
+  font-size: 24px;
+}
+.discover__btn {
+  border-radius: 50px;
+  margin-bottom: 50px;
+  padding: 20px 30px;
+  color: #fff;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  box-shadow: 0 6px 15px rgba(71, 71, 71, 0.5058823529);
+  /* a voir variable */
+  transition: all 1000ms;
+}
+.discover__btn:hover {
+  box-shadow: 0 8px 20px #474747;
+  background: linear-gradient(to bottom right, #ff93e1 33%, #d7c0f2 100%);
+}
+
 .howto {
   margin: 0 30px 60px;
 }
@@ -337,6 +333,7 @@ a {
 .howto__list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 
@@ -344,7 +341,7 @@ a {
   display: flex;
   position: relative;
   padding: 30px 20px;
-  margin-left: 15px;
+  width: 90%;
 }
 
 .howto__step-number {
@@ -363,12 +360,9 @@ a {
 
 .howto__step-btn {
   display: flex;
-  justify-content: flex-start;
-  width: 100%;
+  justify-content: center;
 }
 .howto__step-btn i {
-  width: 30px;
-  margin-inline: 10px;
   opacity: 0.5;
 }
 
