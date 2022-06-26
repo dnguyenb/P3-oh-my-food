@@ -1,21 +1,11 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
 body {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	min-width: 220px;
+	min-width: 320px;
 	height: 100vh;
 	font-family: $font-text;
 	font-size: 20px;
-}
-
-li {
-	list-style-type: none;
 }
 
 a {
