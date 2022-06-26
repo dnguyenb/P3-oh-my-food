@@ -22,15 +22,12 @@
 			background: linear-gradient(to bottom right,
 					$color-secondary,
 					$color-primary);
-			box-shadow: 0 6px 15px #47474781;
-			/* a voir variable */
-			transition: all 1000ms;
+			transition: all 500ms;
 		}
 
 		&__btn:hover {
-			box-shadow: 0 8px 20px #474747;
 			background: linear-gradient(to bottom right,
-					lighten($color-secondary, 5%) 33%,
-					lighten($color-primary, 25%) 100%);
+					lighten($color-secondary, 4%) 5%,
+					lighten($color-primary, 4%) 90%);
 		}
 	}

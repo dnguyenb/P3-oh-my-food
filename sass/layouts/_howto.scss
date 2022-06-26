@@ -19,8 +19,10 @@
         display: flex;
         position: relative;
         padding: 30px;
-        align-items: center;
+        justify-content: flex-start;
         gap: 20px;
+        cursor: pointer;
+        transition: 500ms;
     }
 
     & li::before {
@@ -39,14 +41,17 @@
         justify-content: center;
     }
 
+    & li:hover {
+        background-color: lighten($color-primary, 35%);
+    }
+
+    & li:hover>i {
+        color: $color-primary;
+    }
+
     & li i {
         opacity: 0.5;
         width: 30px;
         text-align: center;
     }
-}
-
-.howto__step:hover {
-    box-shadow: 0 8px 20px #474747;
-    opacity: 0.85;
 }
