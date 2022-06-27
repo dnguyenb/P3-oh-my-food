@@ -10,18 +10,18 @@
 
 		& p {
 			opacity: 0.5;
-			font-size: 20px;
+			font-size: $font-size-medium;
 		}
 
 		&__btn {
+			@extend .btn;
 			border-radius: 50px;
 			margin-bottom: 50px;
 			padding: 20px 30px;
-			color: #fff;
+			color: $color-txt-btn-discover;
 			background: linear-gradient(to bottom,
 					$color-secondary,
 					$color-primary);
-			transition: all 500ms;
 		}
 
 		&__btn:hover {

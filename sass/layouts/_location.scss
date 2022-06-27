@@ -12,7 +12,7 @@
 			border: none;
 			background-color: $color-bg-dark;
 			font-family: $font-text;
-			font-size: 20px;
+			font-size: $font-size-small;
 			font-weight: 700;
 			padding-left: 5px;
 			width: 220px;
@@ -20,7 +20,7 @@
 
 			&::placeholder {
 				font-family: $font-text;
-				font-size: inherit;
+				font-size: $font-size-small;
 				color: inherit;
 				opacity: 0.7;
 			}

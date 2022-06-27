@@ -2,6 +2,7 @@
 *             COLORS             *
 *********************************/
 
+/** identity colors **/
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
@@ -16,14 +17,22 @@ $color-shdw-dark: #0000008c;
 
 /* button colors */
 $color-txt-btn-new: #1b7241;
+$color-txt-btn-discover: #fff;
 
 /******************************** 
 *             FONTS             *
 ********************************/
 
+/** Font Family **/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 $font-titles: "Shrikhand", sans-serif;
 $font-text: "roboto", sans-serif;
+
+/** Font Size **/
+$font-size-xsmall: 16px;
+$font-size-small: 18px;
+$font-size-medium: 20px;
+$font-size-large: 24px;
