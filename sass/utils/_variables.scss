@@ -2,15 +2,21 @@
 *             COLORS             *
 *********************************/
 
-$color-primary: rgb(147, 86, 220);
-$color-secondary: rgb(255, 121, 218);
-$color-tertiary: rgb(153, 226, 208);
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
 
-$color-bg-light: rgb(242, 242, 242);
-$color-bg-dark: rgb(228, 228, 228);
+/* background colors */
+$color-bg-light: #f2f2f2;
+$color-bg-dark: #e4e4e4;
 
-$color-btn-light: rgba(0, 0, 0, 0.3);
-$color-btn-dark: rgba(0, 0, 0, 0.55);
+/* shadow colors */
+$color-shdw-light: #0000004d;
+$color-shdw-dark: #0000008c;
+
+/* button colors */
+$color-txt-btn-new: #1b7241;
+
 /******************************** 
 *             FONTS             *
 ********************************/

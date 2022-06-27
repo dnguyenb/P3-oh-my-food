@@ -7,10 +7,9 @@
     }
 
     &__list {
-        display: flex;
+        @include flex-center;
         flex-direction: column;
         row-gap: 30px;
-        align-items: center;
     }
 }
 
@@ -28,12 +27,12 @@
     }
 
     &__new {
-        background-color:rgb(148, 232, 204);
+        background-color: $color-tertiary;
         position: absolute;
         top: 30px;
         right: 35px;
         font-size: 16px;
-        color:rgb(27, 114, 65);
+        color: $color-txt-btn-new;
         padding: 10px 20px;
         border-radius: 5px;
     }

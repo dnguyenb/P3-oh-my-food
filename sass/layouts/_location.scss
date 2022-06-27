@@ -1,7 +1,5 @@
 	.location {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex-center;
 		padding: 20px;
 		background-color: $color-bg-dark;
 
@@ -13,16 +11,16 @@
 		&__input {
 			border: none;
 			background-color: $color-bg-dark;
+			font-family: $font-text;
 			font-size: 20px;
 			font-weight: 700;
 			padding-left: 5px;
 			width: 220px;
-			box-sizing: content-box;
 			max-width: 100%;
 
 			&::placeholder {
 				font-family: $font-text;
-				font-size: 20px;
+				font-size: inherit;
 				color: inherit;
 				opacity: 0.7;
 			}

@@ -11,11 +11,13 @@
 	border: none;
 	border-radius: 25px;
 	min-width: 200px;
+	font-family: $font-text;
 	font-weight: 700;
+	font-size: 18px;
 	background-color: $color-bg-light;
-	box-shadow: 0 6px 15px $color-btn-light;
+	box-shadow: 0 6px 15px $color-shdw-light;
 }
 
 .btn:hover {
-	box-shadow: 0 8px 20px $color-btn-dark;
+	box-shadow: 0 8px 20px $color-shdw-dark;
 }

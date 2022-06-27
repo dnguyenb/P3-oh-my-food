@@ -1,10 +1,8 @@
 	.header__logo {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex-center;
 		padding: 35px 0 20px;
 		position: relative;
-		box-shadow: 0 2px 6px $color-btn-dark;
+		box-shadow: 0 2px 6px $color-shdw-dark;
 
 		img {
 			max-width: 60%;

@@ -4,9 +4,15 @@ body {
 	width: 100%;
 	min-width: 320px;
 	height: 100vh;
-	font-family: $font-text;
 	font-size: 20px;
+	font-family: $font-text;
 }
+
+h1,
+h2 {
+	font-size: 24px;
+}
+
 
 a {
 	text-decoration: none;
