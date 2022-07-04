@@ -5,26 +5,28 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>OhMyFood! - Accueil</title>
         <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et r&eacute;duire leur temps d&apos;attente dans les
 restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus de perte de temps &agrave; consulter la carte
 !">
-        <link rel="shortcut icon" href="img/favicon/ohmyfood.ico" type="image/x-icon">
-        <!-- adding font awesome -->
+        <!-- font awesome -->
         <script src="https://kit.fontawesome.com/d39b49135d.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./img/favicon/site.webmanifest">
     </head>
 
     <body>
         <header>
             <div class="header__logo">
-                <img src="/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood!" width="196" height="34">
+                <img src="./img/logo/ohmyfood@2x.svg" alt="logo ohmyfood!" width="196" height="34">
             </div>
         </header>
 
         <main>
-
             <section class="location-form">
                 <form action="#" method="post" class="location">
                     <label for="location"><a href="#" class="location__label"><i
@@ -39,7 +41,7 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                 <h1 class="discover__title">R&eacute;servez le menu qui vous convient</h1>
                 <p>D&eacute;couvrez des restaurants d&apos;exception, s&eacute;lectionn&eacute;s par nos soins.</p>
 
-                <button class="discover__btn" type="button">Explorer nos restaurants</button>
+                <div class="discover__btn"><a href="#restaurants"> Explorer nos restaurants</a></div>
             </section>
 
             <section class="howto">
@@ -54,84 +56,69 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                             votre menu</span>
                     </li>
                     <li>
-                        <i class="fa-solid fa-store"></i><span>Dégustez au
+                        <i class="fa-solid fa-store"></i><span>D&eacute;gustez au
                             restaurant</span>
                     </li>
                 </ol>
             </section>
 
-            <section class="restaurants">
+            <section id="restaurants" class="restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
                 <div class="restaurants__list">
 
-                    <div class="card">
-                        <a href="/menus/la_palette_du_gout.html">
+                    <article class="card">
+                        <a href="./restaurants/la_palette_du_gout.html">
                             <div class="card__new">Nouveau</div>
-                            <img class="card__img" src="/img/restaurants/la_palette_du_gout.jpg"
+                            <img class="card__img" src="./img/restaurants/la_palette_du_gout.jpg"
                                 alt="Photo du restaurant La Palette du goût" loading="lazy">
-                            <div class="card__footer">
-                                <div class="card__txt">
-                                    <h3>La palette du go&ucirc;t</h3>
-                                    <p>M&eacute;nilmontant</p>
-                                </div>
-                                <div class="card__like">
-                                    <i class="fa-solid fa-heart fa-2x"></i>
-                                </div>
+                            <div class="card__info">
+                                <h3>La palette du go&ucirc;t</h3>
+                                <p>M&eacute;nilmontant</p>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </a>
-                    </div>
+                    </article>
 
-
-                    <div class="card">
-                        <a href="/menus/la_note_enchantee.html">
+                    <article class="card">
+                        <a href="./restaurants/la_note_enchantee.html">
                             <div class="card__new">Nouveau</div>
-                            <img class="card__img" src="/img/restaurants/la_note_enchantee.jpg"
+                            <img class="card__img" src="./img/restaurants/la_note_enchantee.jpg"
                                 alt="Photo du restaurant La note enchant&eacute;e" loading="lazy">
-                            <div class="card__footer">
-                                <div class="card__txt">
-                                    <h3>La note enchant&eacute;e</h3>
-                                    <p>Charonne</p>
-                                </div>
-                                <div class="card__like">
-                                    <i class="fa-solid fa-heart fa-2x"></i>
-                                </div>
+                            <div class="card__info">
+                                <h3>La note enchant&eacute;e</h3>
+                                <p>Charonne</p>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </a>
-                    </div>
+                    </article>
 
-
-                    <div class="card">
-                        <a href="/menus/a_la_francaise.html">
-                            <img class="card__img" src="/img/restaurants/a_la_francaise.jpg"
+                    <article class="card">
+                        <a href="./restaurants/a_la_francaise.html">
+                            <img class="card__img" src="./img/restaurants/a_la_francaise.jpg"
                                 alt="Photo du restaurant &Agrave; la française" loading="lazy">
-                            <div class="card__footer">
-                                <div class="card__txt">
-                                    <h3>&Agrave; la fran&ccedil;aise</h3>
-                                    <p>Cit&eacute; Rouge</p>
-                                </div>
-                                <div class="card__like">
-                                    <i class="fa-solid fa-heart fa-2x"></i>
-                                </div>
+                            <div class="card__info">
+                                <h3>&Agrave; la fran&ccedil;aise</h3>
+                                <p>Cit&eacute; Rouge</p>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </a>
-                    </div>
+                    </article>
 
-
-                    <div class="card">
-                        <a href="/menus/le_delice_des_sens.html">
-                            <img class="card__img" src="/img/restaurants/le_delice_des_sens.jpg"
+                    <article class="card">
+                        <a href="./restaurants/le_delice_des_sens.html">
+                            <img class="card__img" src="./img/restaurants/le_delice_des_sens.jpg"
                                 alt="Photo du restaurant Le d&eacute;lice des sens" loading="lazy">
-                            <div class="card__footer">
-                                <div class="card__txt">
-                                    <h3>Le d&eacute;lice des sens</h3>
-                                    <p>Folie&dash;M&eacute;ricourt</p>
-                                </div>
-                                <div class="card__like">
-                                    <i class="fa-solid fa-heart fa-2x"></i>
-                                </div>
+                            <div class="card__info">
+                                <h3>Le d&eacute;lice des sens</h3>
+                                <p>Folie&dash;M&eacute;ricourt</p>
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
                             </div>
                         </a>
-                    </div>
+                    </article>
 
                 </div>
             </section>
@@ -142,12 +129,12 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
             <ul>
                 <li><a class="footer__item" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
 
-                <li><a class="footer__item" href="#"><i class="fa-solid fa-utensils"></i>Devenir partenaire</a></li>
+                <li><a class="footer__item" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+                </li>
 
-                <li><a class="footer__item" href="#">Mentions légales</a></li>
+                <li><a class="footer__item" href="#">Mentions l&eacute;gales</a></li>
 
                 <li><a class="footer__mail" href="mailto:contact@ohmyfood.com">Contact</a></li>
-
             </ul>
         </footer>
     </body>

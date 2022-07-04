@@ -1,9 +1,16 @@
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		background-color: #fff;
+	}
+
 	.header__logo {
 		@include flex-center;
 		padding: 35px 0 20px;
 		position: relative;
 		/* for back button positionning */
-		box-shadow: 0 2px 6px $color-shdw-dark;
+		box-shadow: 0 2px 6px darken($color-shdw-light, 80);
 
 		img {
 			max-width: 60%;

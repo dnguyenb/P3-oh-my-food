@@ -1,6 +1,4 @@
-/*********************************
-*             COLORS             *
-*********************************/
+/* || COLORS */
 
 /** identity colors **/
 $color-primary: #9356dc;
@@ -12,21 +10,20 @@ $color-bg-light: #f2f2f2;
 $color-bg-dark: #e4e4e4;
 
 /* shadow colors */
-$color-shdw-light: #0000004d;
-$color-shdw-dark: #0000008c;
+$color-shdw-light: #4545454f;
 
 /* button colors */
 $color-txt-btn-new: #1b7241;
-$color-txt-btn-discover: #fff;
+$color-txt-btn-pink: #fff;
+$color-bg-btn-pink: linear-gradient(to bottom right,
+                $color-secondary,
+                $color-primary);
 
-/******************************** 
-*             FONTS             *
-********************************/
+/* || FONTS */
 
 /** Font Family **/
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 $font-titles: "Shrikhand", sans-serif;
 $font-text: "roboto", sans-serif;

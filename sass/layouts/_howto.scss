@@ -16,14 +16,14 @@
     counter-reset: step;
 
     & li {
-        @extend .btn;
+        @include button;
+        border-radius: 25px;
+        background-color: $color-bg-light;
         display: flex;
         justify-content: flex-start;
         gap: 30px;
         padding: 30px;
         position: relative;
-        border-radius: 25px;
-        background-color: $color-bg-light;
     }
 
     & li::before {
@@ -36,21 +36,21 @@
         background-color: $color-primary;
         width: 30px;
         height: 30px;
-        color: #fff;
-        font-size: 16px;
+        color: $color-txt-btn-pink;
+        font-size: $font-size-xsmall;
     }
 
-    & li:hover {
-        background-color: lighten($color-primary, 35%);
+    & li:hover,
+    & li:focus {
+        background-color: lighten($color-primary, 35);
     }
 
-    & li:hover>i {
+    & li:hover>i,
+    & li:focus>i {
         color: $color-primary;
     }
 
     & li i {
         opacity: 0.5;
-        width: 30px;
-        text-align: center;
     }
 }
