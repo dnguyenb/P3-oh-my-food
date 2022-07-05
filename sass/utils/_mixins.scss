@@ -10,29 +10,29 @@
 
 @mixin button {
     @include flex-center;
-    @include box-shadow;
+    @include shadow;
     cursor: pointer;
     border: none;
     min-width: 200px;
-    font-family: $font-text;
     font-weight: 700;
-    font-size: $font-size-small;
+    font-size: $font-size-medium;
     transition: all 400ms;
 }
 
-@mixin pink-button {
+@mixin button-pink {
     @include flex-center;
-    @include box-shadow;
+    @include shadow;
     @include button;
     border-radius: 50px;
-    margin-bottom: 50px;
     padding: 20px 30px;
     color: $color-txt-btn-pink;
     background: $color-bg-btn-pink;
 }
 
-@mixin box-shadow {
-    box-shadow: 0 6px 15px $color-shdw-light;
+@mixin shadow {
+    box-shadow: 0 6px 15px $color-shdw;
 }
 
-/* mixin à créer : box-shadow: 0 8px 20px darken($color-shdw-light, 100%);*/
+@mixin hover-shadow {
+    box-shadow: 0 8px 20px darken($color-shdw, 100%);
+}

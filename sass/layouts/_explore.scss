@@ -2,7 +2,8 @@
 		@include flex-center;
 		flex-direction: column;
 		row-gap: 25px;
-		padding: 40px;
+		padding-top: 40px;
+		padding-bottom: 90px;
 		text-align: center;
 		word-wrap: break-word;
 		background-color: $color-bg-light;
@@ -10,17 +11,19 @@
 
 		p {
 			opacity: 0.5;
-			font-size: $font-size-medium;
+			font-size: $font-size-large;
 		}
 
 		&__btn {
-			@include pink-button;
+			@include button-pink;
+			transition: all 400ms;
 
 			&:hover {
-				box-shadow: 0 8px 20px darken($color-shdw-light, 100);
+				@include hover-shadow;
 				background: linear-gradient(to bottom right,
 						lighten($color-secondary, 3),
 						lighten($color-primary, 3));
 			}
+
 		}
 	}

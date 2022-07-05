@@ -28,7 +28,7 @@
     border-radius: 25px;
     position: relative;
     overflow: hidden;
-    @include box-shadow;
+    @include shadow;
     transition: all 400ms;
 
     &__img {
@@ -43,7 +43,7 @@
         position: absolute;
         top: 18px;
         right: 18px;
-        font-size: $font-size-xsmall;
+        font-size: $font-size-root;
         color: $color-txt-btn-new;
         padding: 5px 15px;
         border-radius: 5px;
@@ -54,21 +54,26 @@
         align-items: center;
         justify-content: space-between;
         padding: 12px 24px 12px 16px;
+        height: 90px;
     }
 
     &__info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 60px;
         // position: relative;
+
+        h3,
+        p {
+            font-size: $font-size-large;
+        }
     }
 
     .card__like {
         position: relative;
         z-index: 1;
         color: black;
-        
+
 
         &:hover {
             &::after {
@@ -93,6 +98,6 @@
 
     .card:focus,
     .card:hover {
-        box-shadow: 0 8px 20px darken($color-shdw-light, 100%);
+        @include hover-shadow;
     }
 }

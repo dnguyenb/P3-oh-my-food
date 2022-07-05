@@ -10,22 +10,22 @@ $color-bg-light: #f2f2f2;
 $color-bg-dark: #e4e4e4;
 
 /* shadow colors */
-$color-shdw-light: #4545454f;
+$color-shdw: #45454542;
 
 /* button colors */
 $color-txt-btn-new: #1b7241;
 $color-txt-btn-pink: #fff;
 $color-bg-btn-pink: linear-gradient(to bottom right,
-        $color-secondary,
-        $color-primary);
+                $color-secondary,
+                $color-primary);
 
 /* || FONTS */
 /** Font Family **/
-$font-titles: "Shrikhand", sans-serif;
+$font-title: "Shrikhand", sans-serif;
 $font-text: "roboto", sans-serif;
 
 /** Font Size **/
-$font-size-xsmall: 16px;
-$font-size-small: 18px;
-$font-size-medium: 20px;
-$font-size-large: 24px;
+$font-size-root: 1rem; // 16px
+$font-size-small: 1.12rem; // 18px
+$font-size-medium: 1.25rem; // 20px
+$font-size-large: 1.5rem; // 24px

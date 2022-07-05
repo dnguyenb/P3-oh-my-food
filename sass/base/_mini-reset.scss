@@ -43,6 +43,8 @@ button,
 input,
 select {
     margin: 0;
+    font-family: "roboto";
+    font-size: inherit;
 }
 
 * {
@@ -52,7 +54,13 @@ select {
 *,
 *::before,
 *::after {
-    box-sizing: inherit
+    box-sizing: border-box;
+}
+
+*::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
 }
 
 img,
