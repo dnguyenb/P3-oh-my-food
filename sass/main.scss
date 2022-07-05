@@ -1,11 +1,14 @@
-// @import "./base/normalize.scss";
-@import "./base/mini-reset";
+// || Utils
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/extension";
+
+// || Base 
+@import "./base/mini-reset";
 @import "./base/rules";
+
+// || Layouts
 @import "./layouts/header";
 @import "./layouts/location";
-@import "./layouts/discover";
+@import "./layouts/explore";
 @import "./layouts/howto";
 @import "./layouts/restaurants";

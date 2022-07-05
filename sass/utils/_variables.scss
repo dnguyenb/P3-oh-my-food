@@ -16,15 +16,11 @@ $color-shdw-light: #4545454f;
 $color-txt-btn-new: #1b7241;
 $color-txt-btn-pink: #fff;
 $color-bg-btn-pink: linear-gradient(to bottom right,
-                $color-secondary,
-                $color-primary);
+        $color-secondary,
+        $color-primary);
 
 /* || FONTS */
-
 /** Font Family **/
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
-
 $font-titles: "Shrikhand", sans-serif;
 $font-text: "roboto", sans-serif;
 

@@ -1,6 +1,15 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+/* || COLORS */
+/** identity colors **/
+/* background colors */
+/* shadow colors */
+/* button colors */
+/* || FONTS */
+/** Font Family **/
+/** Font Size **/
+/* || FLEX */
+/* || BUTTONS */
+/* mixin à créer : box-shadow: 0 8px 20px darken($color-shdw-light, 100%);*/
 html,
 body,
 p,
@@ -78,24 +87,6 @@ th {
   padding: 0;
 }
 
-/* || COLORS */
-/** identity colors **/
-/* background colors */
-/* shadow colors */
-/* button colors */
-/* || FONTS */
-/** Font Family **/
-/** Font Size **/
-/* || FLEX */
-/* || BUTTONS */
-/* mixin à créer : box-shadow: 0 8px 20px darken($color-shdw-light, 100%);*/
-/* || Buttons */
-.btn-back {
-  position: absolute;
-  top: 20px;
-  left: 25px;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -159,7 +150,7 @@ header {
   background-color: #e4e4e4;
 }
 .location__label {
-  margin-left: 65px;
+  margin-left: 4rem;
   margin-right: 15px;
 }
 .location__input {
@@ -168,9 +159,11 @@ header {
   font-family: "roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  padding-left: 5px;
-  width: 220px;
+  padding-left: 8px;
+  width: 200px;
   max-width: 100%;
+  height: 40px;
+  outline: none;
 }
 .location__input::placeholder {
   font-family: "roboto", sans-serif;
@@ -178,8 +171,19 @@ header {
   color: inherit;
   opacity: 0.7;
 }
+.location__button {
+  width: 45px;
+  height: 40px;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  background-color: #e4e4e4;
+  display: none;
+}
+.location__button i {
+  font-size: 32px;
+}
 
-.discover {
+.explore {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,11 +195,11 @@ header {
   background-color: #f2f2f2;
   margin-bottom: 60px;
 }
-.discover p {
+.explore p {
   opacity: 0.5;
   font-size: 20px;
 }
-.discover__btn {
+.explore__btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +221,7 @@ header {
   color: #fff;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
-.discover__btn:hover {
+.explore__btn:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3098039216);
   background: linear-gradient(to bottom right, #ff88de, #9b63df);
 }
@@ -296,6 +300,15 @@ header {
   row-gap: 30px;
 }
 
+.card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .card {
   width: 100%;
   border-radius: 25px;
@@ -320,23 +333,40 @@ header {
   padding: 5px 15px;
   border-radius: 5px;
 }
-.card .card__info {
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px 12px 16px;
+}
+.card__info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 55px;
-  padding: 15px;
+  height: 60px;
+}
+.card .card__like {
   position: relative;
+  z-index: 1;
+  color: black;
 }
-.card .fa-heart {
+.card .card__like:hover::after {
+  opacity: 1;
+}
+.card .card__like::after {
+  content: "";
   position: absolute;
-  top: 18px;
-  right: 35px;
-  font-size: 32px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
+  color: red;
 }
-
-.card:hover,
-.card:focus {
+.card .card:focus,
+.card .card:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3098039216);
 }
 
