@@ -3,12 +3,22 @@ html {
 }
 
 body {
-	display: flex;
+	@include flex-center;
 	flex-direction: column;
 	width: 100%;
 	min-width: 320px;
 	min-height: 100vh;
-	font-family: $font-text;
+	font-family: "roboto", sans-serif;
+}
+
+header,
+main,
+footer {
+	width: 100%;
+}
+
+h1 {
+	font-family: "shrikand", sans-serif;
 }
 
 h1,

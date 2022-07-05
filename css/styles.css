@@ -1,13 +1,7 @@
 /* || COLORS */
-/** identity colors **/
 /* background colors */
 /* shadow colors */
-/* button colors */
-/* || FONTS */
-/** Font Family **/
 /** Font Size **/
-/* || FLEX */
-/* || BUTTONS */
 html,
 body,
 p,
@@ -53,7 +47,7 @@ button,
 input,
 select {
   margin: 0;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif;
   font-size: inherit;
 }
 
@@ -99,11 +93,23 @@ html {
 
 body {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
   font-family: "roboto", sans-serif;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+h1 {
+  font-family: "shrikand", sans-serif;
 }
 
 h1,
@@ -129,7 +135,7 @@ img {
 header {
   position: sticky;
   top: 0;
-  z-index: 5;
+  z-index: 2;
   background-color: #fff;
 }
 
@@ -154,8 +160,8 @@ header {
   background-color: #e4e4e4;
 }
 .location__label {
-  margin-left: 32px;
-  margin-right: 15px;
+  margin-left: 40px;
+  margin-right: 16px;
 }
 .location__input {
   border: none;
@@ -308,7 +314,6 @@ header {
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
 }
 
 .card {
@@ -316,8 +321,8 @@ header {
   border-radius: 25px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(69, 69, 69, 0.2588235294);
   transition: all 400ms;
+  box-shadow: 0 6px 15px rgba(69, 69, 69, 0.2588235294);
 }
 .card__img {
   width: 100%;

@@ -14,12 +14,7 @@
 }
 
 .card__link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    @include cover-element;
 }
 
 .card {
@@ -28,8 +23,8 @@
     border-radius: 25px;
     position: relative;
     overflow: hidden;
-    @include shadow;
     transition: all 400ms;
+    @include shadow;
 
     &__img {
         width: 100%;
@@ -39,14 +34,7 @@
     }
 
     &__new {
-        background-color: $color-tertiary;
-        position: absolute;
-        top: 18px;
-        right: 18px;
-        font-size: $font-size-root;
-        color: $color-txt-btn-new;
-        padding: 5px 15px;
-        border-radius: 5px;
+        @include button-new;
     }
 
     &__footer {

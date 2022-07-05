@@ -1,4 +1,4 @@
-/* || FLEX */
+// || DISPOSITION
 
 @mixin flex-center {
     display: flex;
@@ -6,7 +6,15 @@
     justify-content: center;
 }
 
-/* || BUTTONS */
+@mixin cover-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+// || BUTTONS
 
 @mixin button {
     @include flex-center;
@@ -23,11 +31,25 @@
     @include flex-center;
     @include shadow;
     @include button;
+
     border-radius: 50px;
     padding: 20px 30px;
-    color: $color-txt-btn-pink;
-    background: $color-bg-btn-pink;
+    color: #fff;
+    background: $color-gradient;
 }
+
+@mixin button-new {
+    background-color: $color-tertiary;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: $font-size-root;
+    color: #1b7241;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+// | SHADOW EFFECT
 
 @mixin shadow {
     box-shadow: 0 6px 15px $color-shdw;
