@@ -1,0 +1,31 @@
+.footer {
+    background-color: $color-footer;
+    color: #fff;
+    padding: 2rem;
+
+    h2 {
+        font-family: $font-title;
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+
+    li {
+        font-size: 1rem;
+        line-height: 2rem;
+
+        i {
+            width: 20px;
+            margin-right: 0.5rem;
+        }
+
+        &:focus,
+        &:hover {
+            color: $color-secondary;
+        }
+
+        &:active {
+            color: $color-primary;
+        }
+    }
+}

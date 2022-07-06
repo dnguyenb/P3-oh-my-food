@@ -1,6 +1,6 @@
 .restaurants {
     background-color: $color-bg-light;
-    padding: 60px 30px;
+    padding: 80px 30px;
     width: 100%;
 
     &__title {
@@ -30,10 +30,14 @@
     border-radius: 5px;
 }
 
+.card__link {
+    @include tablecloth;
+}
+
 .card {
     // width: min(100%, 500px);
     width: 100%;
-    border-radius: 25px;
+    border-radius: 1.4rem;
     position: relative;
     overflow: hidden;
     transition: all 400ms;
@@ -61,45 +65,34 @@
 
         h3,
         p {
-            font-size: $font-size-large;
+            font-size: 1.3rem;
         }
     }
 
-    .card__link {
-        @include tablecloth;
-    }
-
-    .card__like {
-        position: relative;
-        z-index: 1;
-        color: black;
-
-
-        &:hover {
-            &::after {
-                opacity: 1;
-            }
-        }
-
+    &:hover {
         &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            opacity: 0;
-            z-index: -1;
-            transition: opacity 250ms;
-            color: red;
+            opacity: 1;
         }
-
     }
 
-    .card:focus,
-    .card:hover {
-        @include hover-shadow;
+    &::after {
+        content: "\f004";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms;
+        color: red;
     }
+
+}
+
+.card:focus,
+.card:hover {
+    @include hover-shadow;
 }
 
 // || TABLET 992px

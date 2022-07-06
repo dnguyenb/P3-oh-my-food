@@ -7,7 +7,7 @@
         <!-- meta viewport for responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Google font "Shrikand" for logo and title h1 -->
+        <!-- Google font "Shrikand" for logo and title -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
@@ -15,9 +15,7 @@
         <!-- Google font "Roboto" -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
         <!-- favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
@@ -98,10 +96,7 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                                 <p>M&eacute;nilmontant</p>
                             </div>
 
-                            <div class="card__like">
-                                <i class="fa-regular fa-heart fa-2x card__like--empty"></i>
-                                <i class="fa-solid fa-heart fa-2x card__like--filled"></i>
-                            </div>
+                            <i class="fa-regular fa-heart fa-2x card__like--empty"></i>
                         </div>
 
                         <a href="./restaurants/la_palette_du_gout.html" class="card__link"></a>
@@ -110,45 +105,52 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                     <article class="card new">
                         <img class="card__img" src="./img/restaurants/la_note_enchantee.jpg"
                             alt="Photo du restaurant La note enchant&eacute;e" loading="lazy">
-                        <div class="card__info">
-                            <h3>La note enchant&eacute;e</h3>
-                            <p>Charonne</p>
-                            <i class="fa-regular fa-heart fa-2x heart-empty"></i>
-                            <i class="fa-solid fa-heart fa-2x heart-filled"></i>
+                        <div class="card__footer">
+                            <div class="card__info">
+                                <h3>La note enchant&eacute;e</h3>
+                                <p>Charonne</p>
+                            </div>
+
+                            <i class="fa-regular fa-heart fa-2x"></i>
                         </div>
+
                         <a href="./restaurants/la_note_enchantee.html" class="card__link"></a>
                     </article>
 
                     <article class="card">
                         <img class="card__img" src="./img/restaurants/a_la_francaise.jpg"
                             alt="Photo du restaurant &Agrave; la française" loading="lazy">
-                        <div class="card__info">
-                            <h3>&Agrave; la fran&ccedil;aise</h3>
-                            <p>Cit&eacute; Rouge</p>
+                        <div class="card__footer">
+                            <div class="card__info">
+                                <h3>&Agrave; la fran&ccedil;aise</h3>
+                                <p>Cit&eacute; Rouge</p>
+                            </div>
+
                             <i class="fa-regular fa-heart fa-2x heart-empty"></i>
-                            <i class="fa-solid fa-heart fa-2x heart-filled"></i>
                         </div>
+
                         <a href="./restaurants/a_la_francaise.html" class="card__link"></a>
                     </article>
 
                     <article class="card">
                         <img class="card__img" src="./img/restaurants/le_delice_des_sens.jpg"
                             alt="Photo du restaurant Le d&eacute;lice des sens" loading="lazy">
-                        <div class="card__info">
-                            <h3>Le d&eacute;lice des sens</h3>
-                            <p>Folie&dash;M&eacute;ricourt</p>
-                        </div>
-                        <div class="card__like">
+                        <div class="card__footer">
+                            <div class="card__info">
+                                <h3>Le d&eacute;lice des sens</h3>
+                                <p>Folie&dash;M&eacute;ricourt</p>
+                            </div>
+
                             <i class="fa-regular fa-heart fa-2x heart-empty"></i>
-                            <i class="fa-solid fa-heart fa-2x heart-filled"></i>
                         </div>
                         <a href="./restaurants/le_delice_des_sens.html" class="card__link"></a>
                     </article>
+
                 </div>
             </section>
         </main>
 
-        <footer>
+        <footer class="footer">
             <h2 class="footer__title">ohmyfood</h2>
             <ul>
                 <li><a class="footer__item" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>

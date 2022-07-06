@@ -6,55 +6,54 @@
         margin-bottom: 30px;
     }
 
-}
-
-.howto__list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 15px;
-    counter-reset: step;
-
-    & li {
-        @include button;
-        border-radius: 25px;
-        background-color: $color-bg-light;
+    &__list {
         display: flex;
-        justify-content: flex-start;
+        flex-direction: column;
         gap: 30px;
-        padding: 30px 40px;
-        position: relative;
-    }
+        margin-left: 15px;
+        counter-reset: step;
 
-    & li::before {
-        @include flex-center;
-        content: counter(step);
-        counter-increment: step;
-        position: absolute;
-        left: -15px;
-        border-radius: 100%;
-        background-color: $color-primary;
-        width: 30px;
-        height: 30px;
-        color: #fff;
-        font-size: 1rem;
-    }
+        li {
+            @include button;
+            border-radius: 25px;
+            background-color: $color-bg-light;
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            padding: 30px 40px;
+            position: relative;
+        }
 
-    & li:hover,
-    & li:focus {
-        background-color: lighten($color-primary, 35);
-        @include hover-shadow;
-    }
+        li::before {
+            @include flex-center;
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: -15px;
+            border-radius: 100%;
+            background-color: $color-primary;
+            width: 30px;
+            height: 30px;
+            color: #fff;
+            font-size: 1rem;
+        }
 
-    & li:hover>i,
-    & li:focus>i {
-        color: $color-primary;
-        opacity: 1;
-    }
+        li:hover,
+        li:focus {
+            background-color: lighten($color-primary, 35);
+            @include hover-shadow;
+        }
 
-    & li i {
-        opacity: 0.5;
-        font-size: $font-size-large;
+        li:hover>i,
+        li:focus>i {
+            color: $color-primary;
+            opacity: 1;
+        }
+
+        & li i {
+            opacity: 0.5;
+            font-size: $font-size-large;
+        }
     }
 }
 
@@ -62,12 +61,25 @@
 // || TABLET 992px
 
 @media screen and (min-width: 992px) {
-    .howto {
-        width: 60%;
-        margin: 60px auto;
+    // .howto {
+    //     width: 60%;
+    //     margin: 60px auto;
 
-        &__title {
-            text-align: center;
+    //     &__title {
+    //         text-align: center;
+    //     }
+    // }
+    .howto__title {
+        text-align: center;
+    }
+
+    .howto__list {
+        flex-flow: row nowrap;
+        width: 100%;
+
+        li {
+            justify-content: space-evenly;
+            width: 31%;
         }
     }
 }
