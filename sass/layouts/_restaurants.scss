@@ -14,8 +14,20 @@
     }
 }
 
-.card__link {
-    @include cover-element;
+.new {
+    position: relative; // add the badge "new" easily with .new without creating div
+}
+
+.new::before {
+    content: "Nouveau";
+    background-color: $color-tertiary;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    font-size: $font-size-root;
+    color: darken($color-tertiary, 40);
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 
 .card {
@@ -31,11 +43,6 @@
         width: 100%;
         height: 200px;
         object-fit: cover;
-        object-position: bottom;
-    }
-
-    &__new {
-        @include button-new;
     }
 
     &__footer {
@@ -56,6 +63,10 @@
         p {
             font-size: $font-size-large;
         }
+    }
+
+    .card__link {
+        @include tablecloth;
     }
 
     .card__like {
@@ -91,18 +102,17 @@
     }
 }
 
+// || TABLET 992px
+
 @media screen and (min-width: 992px) {
 
     .restaurants__list {
-        flex-flow: row wrap;
-        justify-content: space-between;
+        display: grid; // most easier than flex
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     .restaurants__title {
         text-align: center;
-    }
-
-    .card {
-        width: 47%;
     }
 }

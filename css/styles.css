@@ -270,8 +270,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  counter-increment: step;
   content: counter(step);
+  counter-increment: step;
   position: absolute;
   left: -15px;
   border-radius: 100%;
@@ -319,12 +319,20 @@ header {
   row-gap: 30px;
 }
 
-.card__link {
+.new {
+  position: relative;
+}
+
+.new::before {
+  content: "Nouveau";
+  background-color: #99e2d0;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: 18px;
+  right: 18px;
+  font-size: 1rem;
+  color: #278870;
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 
 .card {
@@ -339,17 +347,6 @@ header {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  object-position: bottom;
-}
-.card__new {
-  background-color: #99e2d0;
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  font-size: 1rem;
-  color: #1b7241;
-  padding: 5px 15px;
-  border-radius: 5px;
 }
 .card__footer {
   display: flex;
@@ -366,6 +363,13 @@ header {
 .card__info h3,
 .card__info p {
   font-size: 1.5rem;
+}
+.card .card__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 .card .card__like {
   position: relative;
@@ -394,14 +398,12 @@ header {
 
 @media screen and (min-width: 992px) {
   .restaurants__list {
-    flex-flow: row wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
   .restaurants__title {
     text-align: center;
-  }
-  .card {
-    width: 47%;
   }
 }
 

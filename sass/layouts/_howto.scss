@@ -28,8 +28,8 @@
 
     & li::before {
         @include flex-center;
-        counter-increment: step;
         content: counter(step);
+        counter-increment: step;
         position: absolute;
         left: -15px;
         border-radius: 100%;
@@ -57,6 +57,9 @@
         font-size: $font-size-large;
     }
 }
+
+
+// || TABLET 992px
 
 @media screen and (min-width: 992px) {
     .howto {
