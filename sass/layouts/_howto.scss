@@ -57,3 +57,14 @@
         font-size: $font-size-large;
     }
 }
+
+@media screen and (min-width: 992px) {
+    .howto {
+        width: 60%;
+        margin: 60px auto;
+
+        &__title {
+            text-align: center;
+        }
+    }
+}

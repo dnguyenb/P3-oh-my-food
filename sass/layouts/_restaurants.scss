@@ -1,6 +1,7 @@
 .restaurants {
     background-color: $color-bg-light;
     padding: 60px 30px;
+    width: 100%;
 
     &__title {
         margin-bottom: 30px;
@@ -87,5 +88,21 @@
     .card:focus,
     .card:hover {
         @include hover-shadow;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .restaurants__list {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    .restaurants__title {
+        text-align: center;
+    }
+
+    .card {
+        width: 47%;
     }
 }
