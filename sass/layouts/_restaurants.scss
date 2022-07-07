@@ -1,5 +1,5 @@
 .restaurants {
-    background-color: $color-bg-light;
+    background-color: $colorBackgroundLight;
     padding: 80px 30px;
     width: 100%;
 
@@ -15,19 +15,11 @@
 }
 
 .new {
-    position: relative; // add the badge "new" easily with .new without creating div
+    position: relative; // add the badge "new" easily with adding .new without creating div
 }
 
 .new::before {
-    content: "Nouveau";
-    background-color: $color-tertiary;
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    font-size: $font-size-root;
-    color: darken($color-tertiary, 40);
-    padding: 5px 15px;
-    border-radius: 5px;
+    @include buttonNew;
 }
 
 .card__link {
@@ -37,7 +29,7 @@
 .card {
     // width: min(100%, 500px);
     width: 100%;
-    border-radius: 1.4rem;
+    border-radius: 1.3rem;
     position: relative;
     overflow: hidden;
     transition: all 400ms;
@@ -65,7 +57,7 @@
 
         h3,
         p {
-            font-size: 1.3rem;
+            font-size: $fontMedium;
         }
     }
 
@@ -95,9 +87,10 @@
     @include hover-shadow;
 }
 
-// || TABLET 992px
+// || TABLET breakpoint 768px
 
-@media screen and (min-width: 992px) {
+@media #{$tabletScreen} {
+    // interpolation variable with #{}
 
     .restaurants__list {
         display: grid; // most easier than flex

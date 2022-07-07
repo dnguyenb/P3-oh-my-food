@@ -1,7 +1,7 @@
 	.location {
 		@include flex-center;
 		padding: 1.3rem;
-		background-color: $color-bg-dark;
+		background-color: $colorBackgroundDark;
 
 		&__label {
 			margin-left: 1.5rem;
@@ -9,18 +9,18 @@
 		}
 
 		&__icon {
-			font-size: 1.4rem;
+			font-size: 1.3rem;
 		}
 
 		&__input {
 			border: none;
-			background-color: $color-bg-dark;
+			background-color: $colorBackgroundDark;
 			font-weight: 700;
 			padding-left: 0.5rem;
 			width: 200px;
 			max-width: 100%;
 			height: 40px;
-			font-size: $font-size-small;
+			font-size: $fontSmall;
 			outline: none;
 
 			&::placeholder {
@@ -33,7 +33,7 @@
 			height: 40px;
 			border: none;
 			border-radius: 0 12px 12px 0;
-			background-color: $color-bg-dark;
+			background-color: $colorBackgroundDark;
 			display: none; // to change after project validation
 
 			i {

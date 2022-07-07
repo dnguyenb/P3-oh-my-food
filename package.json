@@ -1,7 +1,7 @@
 {
 	"name": "ohmyfood",
 	"version": "1.0.0",
-	"description": "",
+	"description": "ohmyfood's website",
 	"main": "index.js",
 	"scripts": {
 		"sass": "sass --watch ./sass/main.scss:./css/styles.css"

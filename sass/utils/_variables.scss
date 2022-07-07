@@ -1,26 +1,31 @@
-/* || COLORS */
+// COLORS
 
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-gradient: linear-gradient(to bottom right,
-        $color-secondary,
-        $color-primary);
+$colorPrimary: #9356dc;
+$colorSecondary: #ff79da;
+$colorTertiary: #99e2d0;
+$colorGradient: linear-gradient(to bottom right,
+                $colorSecondary,
+                $colorPrimary);
 
-/* background colors */
-$color-bg-light: #f2f2f2;
-$color-bg-dark: #e4e4e4;
-$color-footer: #323232;
+// BACKGROUND COLORS
+$colorBackgroundLight: #f2f2f2;
+$colorBackgroundDark: #e4e4e4;
+$colorFooter: #323232;
 
-/* shadow colors */
-$color-shdw: rgba(0, 0, 0, 0.3);
+// SHADOW COLORS
+$colorShdw: rgba(0, 0, 0, 0.3);
 
-$font-title: "shrikhand", sans-serif;
-$font-text: "roboto", sans-serif;
+$fontTitle: "shrikhand", sans-serif;
+$fontText: "roboto", sans-serif;
 
 
-/** Font Size **/
-$font-size-root: 1rem; // 16px
-$font-size-small: 1.12rem; // 18px
-$font-size-medium: 1.25rem; // 20px
-$font-size-large: 1.5rem; // 24px
+// FONT SIZE
+$fontRoot: 1rem; // 16px
+$fontSmall: 1.12rem; // 18px
+$fontMedium: 1.3rem; // 20px
+$fontLarge: 1.5rem; // 24px
+
+// MEDIA QUERIES
+
+$tabletScreen: "screen and (min-width: 768px)";
+$desktopScreen: "screen and (min-width: 992px)";

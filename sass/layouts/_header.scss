@@ -3,16 +3,7 @@
 		top: 0;
 		z-index: 2;
 		background-color: #fff;
-	}
-
-	.header__logo {
-		@include flex-center;
-		padding: 35px 0 20px;
-		position: relative; // for back button
 		@include shadow;
-
-		img {
-			max-width: 60%;
-			height: auto;
-		}
+		@include flex-center;
+		padding: 1rem 0;
 	}

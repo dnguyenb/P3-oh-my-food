@@ -16,7 +16,7 @@
         li {
             @include button;
             border-radius: 25px;
-            background-color: $color-bg-light;
+            background-color: $colorBackgroundLight;
             display: flex;
             justify-content: flex-start;
             gap: 30px;
@@ -31,7 +31,7 @@
             position: absolute;
             left: -15px;
             border-radius: 100%;
-            background-color: $color-primary;
+            background-color: $colorPrimary;
             width: 30px;
             height: 30px;
             color: #fff;
@@ -40,35 +40,28 @@
 
         li:hover,
         li:focus {
-            background-color: lighten($color-primary, 35);
+            background-color: lighten($colorPrimary, 35);
             @include hover-shadow;
         }
 
         li:hover>i,
         li:focus>i {
-            color: $color-primary;
+            color: $colorPrimary;
             opacity: 1;
         }
 
         & li i {
             opacity: 0.5;
-            font-size: $font-size-large;
+            font-size: $fontLarge;
         }
     }
 }
 
 
-// || TABLET 992px
+// || TABLET breakpoint 768px
 
-@media screen and (min-width: 992px) {
-    // .howto {
-    //     width: 60%;
-    //     margin: 60px auto;
+@media #{$tabletScreen} {
 
-    //     &__title {
-    //         text-align: center;
-    //     }
-    // }
     .howto__title {
         text-align: center;
     }

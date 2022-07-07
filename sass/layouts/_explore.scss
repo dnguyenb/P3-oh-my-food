@@ -6,12 +6,12 @@
 		padding-bottom: 90px;
 		text-align: center;
 		word-wrap: break-word;
-		background-color: $color-bg-light;
+		background-color: $colorBackgroundLight;
 		margin-bottom: 60px;
 
 		p {
 			opacity: 0.5;
-			font-size: $font-size-large;
+			font-size: $fontLarge;
 		}
 
 		&__btn {
@@ -21,8 +21,8 @@
 			&:hover {
 				@include hover-shadow;
 				background: linear-gradient(to bottom right,
-						lighten($color-secondary, 3),
-						lighten($color-primary, 3));
+						lighten($colorSecondary, 3),
+						lighten($colorPrimary, 3));
 			}
 
 		}
