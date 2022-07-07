@@ -74,11 +74,7 @@
 
                 &::after {
                     content: "\f004";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
+                    @include tablecloth;
                     background: $colorGradient;
                     background-clip: text;
                     -webkit-background-clip: text;
@@ -88,6 +84,11 @@
                     z-index: 1;
                     transition: opacity 400ms;
                 }
+
+                input {
+                    @include tablecloth;
+                    display: none;
+                }
             }
         }
     }
@@ -96,6 +97,10 @@
 .card:focus,
 .card:hover {
     @include hover-shadow;
+<<<<<<< HEAD
+=======
+
+>>>>>>> dev
 }
 
 // || TABLET breakpoint 768px
