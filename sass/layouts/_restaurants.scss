@@ -74,11 +74,7 @@
 
                 &::after {
                     content: "\f004";
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
+                    @include tablecloth;
                     background: $colorGradient;
                     background-clip: text;
                     -webkit-background-clip: text;
@@ -88,24 +84,21 @@
                     z-index: 1;
                     transition: opacity 400ms;
                 }
+
+                input {
+                    @include tablecloth;
+                    display: none;
+                }
             }
         }
     }
 }
 
-// .card:focus,
-// .card:hover {
-//     @include selection;
-//     @include hover-shadow;
-//     @extend .animate;
-//     outline: 2px solid $colorSecondary;
-//     border: 2px solid $colorPrimary;
-//     transition-property: box-shadow, outline, border;
-//     transition-duration: 400ms, 1s, 1s;
-//     transition-delay: 900ms, 0, 0;
-//     transition-timing-function: ease-in-out;
+.card:focus,
+.card:hover {
+    @include hover-shadow;
 
-// }
+}
 
 // || TABLET breakpoint 768px
 
