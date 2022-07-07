@@ -400,6 +400,11 @@ header {
   transition: opacity 400ms;
 }
 
+.card:focus,
+.card:hover {
+  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
 @media screen and (min-width: 768px) {
   .restaurants__list {
     display: grid;
