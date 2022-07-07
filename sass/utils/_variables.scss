@@ -1,11 +1,10 @@
 // COLORS
-
 $colorPrimary: #9356dc;
 $colorSecondary: #ff79da;
 $colorTertiary: #99e2d0;
 $colorGradient: linear-gradient(to bottom right,
-                $colorSecondary,
-                $colorPrimary);
+        $colorSecondary,
+        $colorPrimary);
 
 // BACKGROUND COLORS
 $colorBackgroundLight: #f2f2f2;
@@ -18,7 +17,6 @@ $colorShdw: rgba(0, 0, 0, 0.3);
 $fontTitle: "shrikhand", sans-serif;
 $fontText: "roboto", sans-serif;
 
-
 // FONT SIZE
 $fontRoot: 1rem; // 16px
 $fontSmall: 1.12rem; // 18px
@@ -26,6 +24,5 @@ $fontMedium: 1.3rem; // 20px
 $fontLarge: 1.5rem; // 24px
 
 // MEDIA QUERIES
-
 $tabletScreen: "screen and (min-width: 768px)";
 $desktopScreen: "screen and (min-width: 992px)";

@@ -47,45 +47,65 @@
         justify-content: space-between;
         padding: 12px 24px 12px 16px;
         height: 90px;
-    }
 
-    &__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // position: relative;
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-        h3,
-        p {
-            font-size: $fontMedium;
+            h3,
+            p {
+                font-size: $fontMedium;
+            }
+        }
+
+        &-like {
+            position: relative;
+
+            .fa-regular {
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &::after {
+                    content: "\f004";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: $colorGradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    font-weight: bold;
+                    opacity: 0;
+                    z-index: 1;
+                    transition: opacity 400ms;
+                }
+            }
         }
     }
-
-    &:hover {
-        &::after {
-            opacity: 1;
-        }
-    }
-
-    &::after {
-        content: "\f004";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        z-index: -1;
-        transition: opacity 250ms;
-        color: red;
-    }
-
 }
 
-.card:focus,
-.card:hover {
-    @include hover-shadow;
-}
+// .card:focus,
+// .card:hover {
+//     @include selection;
+//     @include hover-shadow;
+//     @extend .animate;
+//     outline: 2px solid $colorSecondary;
+//     border: 2px solid $colorPrimary;
+//     transition-property: box-shadow, outline, border;
+//     transition-duration: 400ms, 1s, 1s;
+//     transition-delay: 900ms, 0, 0;
+//     transition-timing-function: ease-in-out;
+
+// }
 
 // || TABLET breakpoint 768px
 

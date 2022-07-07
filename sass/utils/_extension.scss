@@ -1,39 +1,6 @@
-/* || Buttons */
-
-.btn-back {
-    position: absolute;
-    top: 20px;
-    left: 25px;
-}
-
-.btn {
-    // @include flex-center;
-    // @include box-shadow;
-    // cursor: pointer;
-    // border: none;
-    // min-width: 200px;
-    // font-family: $font-text;
-    // font-weight: 700;
-    // font-size: 18px;
-    // transition: all 400ms;
-}
-
-.btn:hover {
-    // box-shadow: 0 8px 20px darken($color-shdw-light, 100%);
-}
-
-
-.btn-pink {
-    // @extend .btn;
-    // border-radius: 50px;
-    // margin-bottom: 50px;
-    // padding: 20px 30px;
-    // color: $color-txt-btn-pink;
-    // background: $color-bg-btn-pink;
-}
-
-.btn-pink:hover {
-    // background: linear-gradient(to bottom right,
-    //         lighten($color-secondary, 4%),
-    //         lighten($color-primary, 4%));
+.animate {
+    animation-name: selection;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 200ms;
 }

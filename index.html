@@ -89,13 +89,13 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                             alt="Photo du restaurant La Palette du goût" loading="lazy">
 
                         <div class="card__footer">
-                            <div class="card__info">
+                            <div class="card__footer-info">
                                 <h3>La palette du go&ucirc;t</h3>
                                 <p>M&eacute;nilmontant</p>
                             </div>
-
-                            <i class="fa-regular fa-heart fa-2x card__like--empty"></i>
-                            <i class="fa-solid fa-heart fa-2x"></i>
+                            <div class="card__footer-like">
+                                <i class="fa-regular fa-heart fa-2x"></i>
+                            </div>
                         </div>
 
                         <a href="./restaurants/la_palette_du_gout.html" class="card__link"></a>
@@ -109,11 +109,10 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                                 <h3>La note enchant&eacute;e</h3>
                                 <p>Charonne</p>
                             </div>
-
-                            <i class="fa-regular fa-heart fa-2x"></i>
-                            <i class="fa-solid fa-heart fa-2x"></i>
+                            <div class="card__footer-like">
+                                <i class="fa-regular fa-heart fa-2x"></i>
+                            </div>
                         </div>
-
                         <a href="./restaurants/la_note_enchantee.html" class="card__link"></a>
                     </article>
 
@@ -125,11 +124,10 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                                 <h3>&Agrave; la fran&ccedil;aise</h3>
                                 <p>Cit&eacute; Rouge</p>
                             </div>
-
-                            <i class="fa-regular fa-heart fa-2x heart-empty"></i>
-                            <i class="fa-solid fa-heart fa-2x"></i>
+                            <div class="card__footer-like">
+                                <i class="fa-regular fa-heart fa-2x"></i>
+                            </div>
                         </div>
-
                         <a href="./restaurants/a_la_francaise.html" class="card__link"></a>
                     </article>
 
@@ -141,9 +139,9 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
                                 <h3>Le d&eacute;lice des sens</h3>
                                 <p>Folie&dash;M&eacute;ricourt</p>
                             </div>
-
-                            <i class="fa-regular fa-heart fa-2x heart-empty"></i>
-                            <i class="fa-solid fa-heart fa-2x"></i>
+                            <div class="card__footer-like">
+                                <i class="fa-regular fa-heart fa-2x"></i>
+                            </div>
                         </div>
                         <a href="./restaurants/le_delice_des_sens.html" class="card__link"></a>
                     </article>
@@ -155,14 +153,15 @@ restaurants car leur menu est pr&eacute;par&eacute; &agrave; l&apos;avance. Plus
         <footer class="footer">
             <h2 class="footer__title">ohmyfood</h2>
             <ul class="footer__list">
-                <li><a class="footer__item" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                <li class="footer__item"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
 
-                <li><a class="footer__item" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+                <li class="footer__item"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
                 </li>
 
-                <li><a class="footer__item" href="#"><i class="fa-solid fa-info"></i>Mentions l&eacute;gales</a></li>
+                <li class="footer__item"><a href="#"><i class="fa-solid fa-info"></i>Mentions l&eacute;gales</a></li>
 
-                <li><a class="footer__mail" href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-at"></i>Nous contacter</a></li>
+                <li class="footer__item"><a href="mailto:contact@ohmyfood.com"><i class="fa-solid fa-at"></i>Nous
+                        contacter</a></li>
             </ul>
         </footer>
     </body>
