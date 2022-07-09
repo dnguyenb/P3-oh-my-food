@@ -1,9 +1,10 @@
 // || DISPOSITION
 
-@mixin flex-center {
+@mixin flex-center($align-items: center, $justify-content: center, $flex-direction: row) {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: $align-items;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
 }
 
 @mixin tablecloth {

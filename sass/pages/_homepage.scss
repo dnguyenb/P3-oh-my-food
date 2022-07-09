@@ -1,0 +1,271 @@
+// SECTION LOCATION
+
+.location {
+    @include flex-center;
+    padding: 1.3rem;
+    background-color: $colorBackgroundDark;
+
+    &__label {
+        margin-left: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    &__icon {
+        font-size: 1.3rem;
+    }
+
+    &__input {
+        border: none;
+        background-color: $colorBackgroundDark;
+        font-weight: 700;
+        padding-left: 0.5rem;
+        width: 200px;
+        max-width: 100%;
+        height: 40px;
+        font-size: $fontSmall;
+        outline: none;
+
+        &::placeholder {
+            opacity: 0.7;
+        }
+    }
+
+    &__button {
+        width: 45px;
+        height: 40px;
+        border: none;
+        border-radius: 0 12px 12px 0;
+        background-color: $colorBackgroundDark;
+        display: none; // to change after project validation
+
+        i {
+            font-size: 2rem;
+        }
+    }
+}
+
+// SECTION EXPLORE
+
+.explore {
+    @include flex-center($flex-direction: column);
+    row-gap: 2rem;
+    padding-top: 40px;
+    padding-bottom: 90px;
+    text-align: center;
+    word-wrap: break-word;
+    background-color: $colorBackgroundLight;
+    margin-bottom: 60px;
+
+    p {
+        opacity: 0.5;
+        font-size: $fontLarge;
+    }
+
+    &__btn {
+        @include button-pink;
+        transition: all 400ms;
+
+        &:hover {
+            @include hover-shadow;
+            background: linear-gradient(to bottom right,
+                    lighten($colorSecondary, 3),
+                    lighten($colorPrimary, 3));
+        }
+    }
+}
+
+// SECTION HOWTO
+
+.howto {
+    margin: 0 30px 60px;
+
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-left: 15px;
+        counter-reset: step;
+
+        li {
+            @include button;
+            border-radius: 25px;
+            background-color: $colorBackgroundLight;
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            padding: 30px 40px;
+            position: relative;
+        }
+
+        li::before {
+            @include flex-center;
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: -15px;
+            border-radius: 100%;
+            background-color: $colorPrimary;
+            width: 30px;
+            height: 30px;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        li:hover,
+        li:focus {
+            background-color: lighten($colorPrimary, 35);
+            @include hover-shadow;
+        }
+
+        li:hover>i,
+        li:focus>i {
+            color: $colorPrimary;
+            opacity: 1;
+        }
+
+        & li i {
+            opacity: 0.5;
+            font-size: $fontLarge;
+        }
+    }
+}
+
+
+// || TABLET breakpoint 768px
+
+@media #{$tabletScreen} {
+
+    .howto__title {
+        text-align: center;
+    }
+
+    .howto__list {
+        flex-flow: row nowrap;
+        width: 100%;
+
+        li {
+            justify-content: space-evenly;
+            width: 31%;
+        }
+    }
+}
+
+// SECTION RESTAURANTS
+
+.restaurants {
+    background-color: $colorBackgroundLight;
+    padding: 80px 30px;
+    width: 100%;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        @include flex-center;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+.new {
+    position: relative; // add the badge "new" easily with adding .new without creating div
+}
+
+.new::before {
+    @include buttonNew;
+}
+
+.card__link {
+    @include tablecloth;
+}
+
+.card {
+    // width: min(100%, 500px);
+    width: 100%;
+    border-radius: 1.3rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 400ms;
+    @include shadow;
+
+    &__img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    &__footer {
+        @include flex-center($justify-content: space-between);
+        padding: 12px 24px 12px 16px;
+        height: 90px;
+
+        &-info {
+            @include flex-center($align-items: flex-start, $justify-content: space-between, $flex-direction: column);
+
+            h3,
+            p {
+                font-size: $fontMedium;
+            }
+        }
+
+        &-like {
+            position: relative;
+
+            .fa-regular {
+                position: relative;
+                cursor: pointer;
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &::after {
+                    content: "\f004";
+                    @include tablecloth;
+                    background: $colorGradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    font-weight: 700;
+                    opacity: 0;
+                    z-index: 1;
+                    transition: opacity 400ms;
+                }
+
+                input {
+                    @include tablecloth;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.card:focus,
+.card:hover {
+    @include hover-shadow;
+}
+
+// || TABLET breakpoint 768px
+
+@media #{$tabletScreen} {
+    // interpolation variable with #{}
+
+    .restaurants__list {
+        display: grid; // most easier than flex
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .restaurants__title {
+        text-align: center;
+    }
+}

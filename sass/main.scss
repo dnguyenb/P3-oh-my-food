@@ -9,8 +9,8 @@
 
 // || Layouts
 @import "./layouts/header";
-@import "./layouts/location";
-@import "./layouts/explore";
-@import "./layouts/howto";
-@import "./layouts/restaurants";
 @import "./layouts/footer";
+
+// || Pages
+@import "./pages/homepage";
+@import "./pages/restaurants";
