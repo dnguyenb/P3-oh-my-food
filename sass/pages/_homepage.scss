@@ -1,7 +1,7 @@
 // SECTION LOCATION
 
 .location {
-    @include flex-center;
+    @include flex;
     padding: 1.3rem;
     background-color: $colorBackgroundDark;
 
@@ -47,7 +47,7 @@
 // SECTION EXPLORE
 
 .explore {
-    @include flex-center($flex-direction: column);
+    @include flex($flex-direction: column);
     row-gap: 2rem;
     padding-top: 40px;
     padding-bottom: 90px;
@@ -62,11 +62,11 @@
     }
 
     &__btn {
-        @include button-pink;
+        @include buttonPink;
         transition: all 400ms;
 
         &:hover {
-            @include hover-shadow;
+            @include hoverShadow;
             background: linear-gradient(to bottom right,
                     lighten($colorSecondary, 3),
                     lighten($colorPrimary, 3));
@@ -103,7 +103,7 @@
         }
 
         li::before {
-            @include flex-center;
+            @include flex;
             content: counter(step);
             counter-increment: step;
             position: absolute;
@@ -119,7 +119,7 @@
         li:hover,
         li:focus {
             background-color: lighten($colorPrimary, 35);
-            @include hover-shadow;
+            @include hoverShadow;
         }
 
         li:hover>i,
@@ -167,7 +167,7 @@
     }
 
     &__list {
-        @include flex-center;
+        @include flex;
         flex-direction: column;
         row-gap: 30px;
     }
@@ -201,12 +201,12 @@
     }
 
     &__footer {
-        @include flex-center($justify-content: space-between);
+        @include flex ($justify-content: space-between);
         padding: 12px 24px 12px 16px;
         height: 90px;
 
         &-info {
-            @include flex-center($align-items: flex-start, $justify-content: space-between, $flex-direction: column);
+            @include flex ($align-items: flex-start, $justify-content: space-between, $flex-direction: column);
 
             h3,
             p {
@@ -251,7 +251,7 @@
 
 .card:focus,
 .card:hover {
-    @include hover-shadow;
+    @include hoverShadow;
 }
 
 // || TABLET breakpoint 768px

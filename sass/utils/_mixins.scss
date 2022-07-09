@@ -1,6 +1,6 @@
 // || DISPOSITION
 
-@mixin flex-center($align-items: center, $justify-content: center, $flex-direction: row) {
+@mixin flex($align-items: center, $justify-content: center, $flex-direction: row) {
     display: flex;
     align-items: $align-items;
     justify-content: $justify-content;
@@ -18,7 +18,7 @@
 // || BUTTONS
 
 @mixin button {
-    @include flex-center;
+    @include flex;
     @include shadow;
     cursor: pointer;
     border: none;
@@ -28,8 +28,8 @@
     transition: all 400ms;
 }
 
-@mixin button-pink {
-    @include flex-center;
+@mixin buttonPink {
+    @include flex;
     @include shadow;
     @include button;
 
@@ -58,7 +58,7 @@
     box-shadow: 0 2px 10px $colorShdw;
 }
 
-@mixin hover-shadow {
+@mixin hoverShadow {
     box-shadow: 0 6px 10px 2px darken($colorShdw, 100%);
 }
 

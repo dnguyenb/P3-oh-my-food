@@ -52,7 +52,7 @@
             text-align: center;
 
         &__item {
-                @include flex-center;
+                @include flex;
             }
         }
     }

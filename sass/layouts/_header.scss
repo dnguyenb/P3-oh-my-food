@@ -4,6 +4,6 @@
 		z-index: 2;
 		background-color: #fff;
 		@include shadow;
-		@include flex-center;
+		@include flex;
 		padding: 1rem 0;
 	}
