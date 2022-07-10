@@ -6,6 +6,10 @@
 // || Base 
 @import "./base/normalize.scss";
 @import "./base/rules";
+@import "./base/typography";
+
+// || Components
+@import "./components/buttons";
 
 // || Layouts
 @import "./layouts/header";

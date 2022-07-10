@@ -15,43 +15,6 @@
     left: 0;
 }
 
-// || BUTTONS
-
-@mixin button {
-    @include flex;
-    @include shadow;
-    cursor: pointer;
-    border: none;
-    min-width: 200px;
-    font-weight: 700;
-    font-size: $fontMedium;
-    transition: all 400ms ease-in-out;
-}
-
-@mixin buttonPink {
-    @include flex;
-    @include shadow;
-    @include button;
-
-    border-radius: 2rem;
-    padding: 1.3rem 2.5rem;
-    color: #fff;
-    background-image: $colorGradient;
-}
-
-@mixin buttonNew {
-    content: "Nouveau";
-    background-color: $colorTertiary;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-size: $fontRoot;
-    font-weight: 700;
-    color: darken($colorTertiary, 40);
-    padding: 0.5rem 0.8rem;
-    border-radius: 0.2rem;
-}
-
 // | SHADOW EFFECT
 
 @mixin shadow {

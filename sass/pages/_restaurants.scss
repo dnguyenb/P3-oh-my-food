@@ -7,4 +7,11 @@
         font-family: $fontTitle;
         font-weight: 400;
     }
+
+     .card__footer-like {
+        display: grid;
+        place-content: center;
+        width: 6rem;
+        height: 6rem;
+    }
 }
