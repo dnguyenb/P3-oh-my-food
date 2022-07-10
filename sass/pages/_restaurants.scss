@@ -1,18 +1,15 @@
-.bannerImage img {
-    max-width: 100%;
+.hero img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 
-.menu__title {
-    @include flex ($justify-content: space-between);
-    padding: 4rem 1rem;
-    border-radius: 30px 30px 0 0;
+.menu {
+    transform: translateY(-4rem);
+    background-color: #fff;
+    border-radius: 4rem;
 
-    h2 {
-        font-family: $fontTitle;
-        font-weight: 400;
-    }
-
-    .menu__like {
+    &__like {
         display: grid;
         place-content: center;
         width: 3rem;
@@ -21,6 +18,16 @@
         .fa-regular {
             @include heartGradient;
         }
-        
+    }
+
+    &__title {
+        @include flex ($justify-content: space-between);
+        padding: 2rem;
+        border-radius: 2rem 2rem 0 0;
+
+        h2 {
+            font-family: $fontTitle;
+            font-weight: 400;
+        }
     }
 }

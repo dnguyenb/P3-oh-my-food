@@ -628,36 +628,31 @@ header .backButton {
     text-align: center;
   }
 }
-.bannerImage img {
-  max-width: 100%;
+.hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
-.menu__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  padding: 4rem 1rem;
-  border-radius: 30px 30px 0 0;
+.menu {
+  transform: translateY(-4rem);
+  background-color: #fff;
+  border-radius: 4rem;
 }
-.menu__title h2 {
-  font-family: "shrikhand", sans-serif;
-  font-weight: 400;
-}
-.menu__title .menu__like {
+.menu__like {
   display: grid;
   place-content: center;
   width: 3rem;
   height: 3rem;
 }
-.menu__title .menu__like .fa-regular {
+.menu__like .fa-regular {
   position: relative;
   cursor: pointer;
 }
-.menu__title .menu__like .fa-regular:hover::after {
+.menu__like .fa-regular:hover::after {
   opacity: 1;
 }
-.menu__title .menu__like .fa-regular::after {
+.menu__like .fa-regular::after {
   content: "\f004";
   position: absolute;
   top: 0;
@@ -673,13 +668,25 @@ header .backButton {
   z-index: 1;
   transition: opacity 400ms ease-in-out;
 }
-.menu__title .menu__like .fa-regular input {
+.menu__like .fa-regular input {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   display: none;
+}
+.menu__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 2rem;
+  border-radius: 2rem 2rem 0 0;
+}
+.menu__title h2 {
+  font-family: "shrikhand", sans-serif;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=styles.css.map */
