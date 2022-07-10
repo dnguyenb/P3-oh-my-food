@@ -215,7 +215,7 @@
         }
 
         &-like .fa-regular {
-            @include heartFilled;
+            @include heartGradient;
         }
     }
 }

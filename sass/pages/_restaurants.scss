@@ -19,7 +19,7 @@
         height: 3rem;
 
         .fa-regular {
-            @include heartFilled;
+            @include heartGradient;
         }
         
     }
