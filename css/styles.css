@@ -243,6 +243,7 @@ footer {
 a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
 img {
@@ -260,11 +261,10 @@ h1 {
   font-family: "shrikhand", sans-serif;
   font-size: 2.5rem;
   font-weight: 400;
-  margin-inline: 4rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
@@ -292,11 +292,6 @@ header .backButton {
   transform: translateY(-50%);
   font-size: 1.5rem;
   opacity: 0.8;
-  margin-right: 3rem;
-}
-header a {
-  display: block;
-  margin-right: 4rem;
 }
 
 .footer {
@@ -586,9 +581,6 @@ header a {
 .card__footer-info p {
   font-size: 1.3rem;
 }
-.card__footer-like {
-  position: relative;
-}
 .card__footer-like .fa-regular {
   position: relative;
   cursor: pointer;
@@ -610,7 +602,7 @@ header a {
   font-weight: 700;
   opacity: 0;
   z-index: 1;
-  transition: opacity 400ms;
+  transition: opacity 400ms ease-in-out;
 }
 .card__footer-like .fa-regular input {
   position: absolute;
@@ -636,23 +628,58 @@ header a {
     text-align: center;
   }
 }
+.bannerImage img {
+  max-width: 100%;
+}
+
 .menu__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  padding: 4rem 3rem 4rem 1.5rem;
+  padding: 4rem 1rem;
   border-radius: 30px 30px 0 0;
 }
 .menu__title h2 {
   font-family: "shrikhand", sans-serif;
   font-weight: 400;
 }
-.menu__title .card__footer-like {
+.menu__title .menu__like {
   display: grid;
   place-content: center;
-  width: 6rem;
-  height: 6rem;
+  width: 3rem;
+  height: 3rem;
+}
+.menu__title .menu__like .fa-regular {
+  position: relative;
+  cursor: pointer;
+}
+.menu__title .menu__like .fa-regular:hover::after {
+  opacity: 1;
+}
+.menu__title .menu__like .fa-regular::after {
+  content: "\f004";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 400ms ease-in-out;
+}
+.menu__title .menu__like .fa-regular input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

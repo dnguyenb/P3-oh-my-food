@@ -1,6 +1,10 @@
+.bannerImage img {
+    max-width: 100%;
+}
+
 .menu__title {
     @include flex ($justify-content: space-between);
-    padding: 4rem 3rem 4rem 1.5rem;
+    padding: 4rem 1rem;
     border-radius: 30px 30px 0 0;
 
     h2 {
@@ -8,10 +12,15 @@
         font-weight: 400;
     }
 
-     .card__footer-like {
+    .menu__like {
         display: grid;
         place-content: center;
-        width: 6rem;
-        height: 6rem;
+        width: 3rem;
+        height: 3rem;
+
+        .fa-regular {
+            @include heartFilled;
+        }
+        
     }
 }

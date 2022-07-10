@@ -214,37 +214,8 @@
             }
         }
 
-        &-like {
-            position: relative;
-
-            .fa-regular {
-                position: relative;
-                cursor: pointer;
-
-                &:hover {
-                    &::after {
-                        opacity: 1;
-                    }
-                }
-
-                &::after {
-                    content: "\f004";
-                    @include tablecloth;
-                    background: $colorGradient;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    color: transparent;
-                    font-weight: 700;
-                    opacity: 0;
-                    z-index: 1;
-                    transition: opacity 400ms;
-                }
-
-                input {
-                    @include tablecloth;
-                    display: none;
-                }
-            }
+        &-like .fa-regular {
+            @include heartFilled;
         }
     }
 }
