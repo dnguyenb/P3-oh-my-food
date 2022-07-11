@@ -586,7 +586,7 @@ header .backButton {
   position: relative;
   cursor: pointer;
 }
-.card__footer-like .fa-regular:hover::after, .card__footer-like .fa-regular:focus::after {
+.card__footer-like .fa-regular:hover::after, .card__footer-like .fa-regular:focus::after, .card__footer-like .fa-regular:active::after {
   opacity: 1;
 }
 .card__footer-like .fa-regular::after {
@@ -646,7 +646,7 @@ header .backButton {
   position: relative;
   cursor: pointer;
 }
-.menu__like .fa-regular:hover::after, .menu__like .fa-regular:focus::after {
+.menu__like .fa-regular:hover::after, .menu__like .fa-regular:focus::after, .menu__like .fa-regular:active::after {
   opacity: 1;
 }
 .menu__like .fa-regular::after {
