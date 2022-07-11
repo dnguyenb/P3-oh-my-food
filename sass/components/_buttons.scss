@@ -1,11 +1,14 @@
 @mixin button {
-    @include flex;
+    @include flex($justify-content: flex-start);
     @include shadow;
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
     cursor: pointer;
     border: none;
     min-width: 200px;
     font-weight: 700;
     font-size: $fontMedium;
+    background-color: $colorBackgroundLight;
     transition: all 400ms ease-in-out;
 }
 
@@ -13,7 +16,6 @@
     @include flex;
     @include shadow;
     @include button;
-
     border-radius: 2rem;
     padding: 1.3rem 2.5rem;
     color: #fff;

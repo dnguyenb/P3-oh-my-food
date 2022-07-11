@@ -1,13 +1,18 @@
-.hero img {
+.hero {
     width: 100%;
-    height: 350px;
-    object-fit: cover;
+
+    img {
+        width: 100%;
+        height: 22rem;
+        object-fit: cover;
+    }
 }
 
 .menu {
     transform: translateY(-4rem);
-    background-color: #fff;
-    border-radius: 4rem;
+    border-radius: 3.5rem;
+    background-color: $colorBackgroundLight;
+    padding: 1rem;
 
     &__like {
         display: grid;
@@ -22,12 +27,26 @@
 
     &__title {
         @include flex ($justify-content: space-between);
-        padding: 2rem;
+        padding: 2rem 1rem 2rem 0;
         border-radius: 2rem 2rem 0 0;
 
         h2 {
             font-family: $fontTitle;
             font-weight: 400;
         }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+        padding-bottom: 0.3rem;
+        border-bottom: 3.5px solid $colorTertiary;
+        width: 3rem;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        @include button;
     }
 }
