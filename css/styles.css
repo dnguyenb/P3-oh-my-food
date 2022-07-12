@@ -300,6 +300,7 @@ header .backButton {
   transform: translateY(-50%);
   font-size: 1.5rem;
   opacity: 0.8;
+  margin-left: -1.5rem;
 }
 
 .footer {
@@ -640,6 +641,7 @@ header .backButton {
 }
 
 .menu {
+  width: 100%;
   margin-top: -4rem;
   border-radius: 3.5rem 3.5rem 0 0;
   background-color: #f2f2f2;
@@ -731,21 +733,9 @@ header .backButton {
   display: flex;
   flex-direction: column;
 }
-.menu article li .meals__price {
+.menu article li .meals__selection {
   font-weight: 700;
   padding-right: 1.3rem;
-  position: relative;
-}
-.menu article li .meals__price:hover {
-  transform: translateX(-32px);
-}
-.menu article li .meals__price:hover::after {
-  transform: translate(0);
-}
-.menu article li .meals__price::after {
-  content: "\f058";
-  position: absolute;
-  transform: translateX(1000px);
 }
 
 /*# sourceMappingURL=styles.css.map */
