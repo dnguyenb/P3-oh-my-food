@@ -63,13 +63,11 @@
 
     &__btn {
         @include buttonPink;
-        transition: all 400ms;
 
         &:hover {
+            transform: scale(1.05);
+            opacity: 0.75;
             @include hoverShadow;
-            background: linear-gradient(to bottom right,
-                    lighten($colorSecondary, 3),
-                    lighten($colorPrimary, 3));
         }
     }
 }
@@ -92,8 +90,7 @@
         counter-reset: step;
 
         li {
-            @include button;
-            gap: 1.8rem;
+            @include howToLabel;
             position: relative;
         }
 
@@ -108,7 +105,7 @@
             width: 2rem;
             height: 2rem;
             color: #fff;
-            font-size: 1rem;
+            font-size: $fontRoot;
         }
 
         li:hover,
@@ -162,8 +159,7 @@
     }
 
     &__list {
-        @include flex;
-        flex-direction: column;
+        @include flex ($flex-direction: column);
         row-gap: 2rem;
     }
 }
@@ -173,7 +169,7 @@
 }
 
 .new::before {
-    @include buttonNew;
+    @include labelNew;
 }
 
 .card__link {

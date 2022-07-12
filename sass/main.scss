@@ -1,7 +1,6 @@
 // || Utils
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/extension";
 @import "./utils/animation";
 
 // || Base 
@@ -11,6 +10,7 @@
 
 // || Components
 @import "./components/buttons";
+@import "./components/label";
 
 // || Layouts
 @import "./layouts/header";

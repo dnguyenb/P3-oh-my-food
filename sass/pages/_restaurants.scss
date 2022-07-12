@@ -27,7 +27,7 @@
 
     &__title {
         @include flex ($justify-content: space-between);
-        padding: 2rem 1rem 3rem 0;
+        padding: 2rem 1rem 2rem 0;
         border-radius: 2rem 2rem 0 0;
 
         h2 {
@@ -49,14 +49,40 @@
         }
 
         ul {
-            @include flex($flex-direction: column, $align-items: initial);
+            display: flex;
+            flex-direction: column;
             gap: 2rem;
         }
 
         li {
-            display: flex;
-            justify-content: space-between;
-            @include button;
+            @include menuLabel;
+
+            .meals__info {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .meals__price {
+                font-weight: 700;
+                padding-right: 1.3rem;
+                position: relative;
+
+                &:hover {
+                    transform: translateX(-32px);
+
+                    &::after {
+                        transform: translate(0);
+                    }
+                }
+
+                &::after {
+                    content: "\f058";
+                    position: absolute;
+                    transform: translateX(1000px);
+                }
+            }
+
+
         }
     }
 }
