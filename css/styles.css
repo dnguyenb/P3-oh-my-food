@@ -6,6 +6,20 @@
   animation-delay: 200ms;
 }
 
+@keyframes favorite {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 article,
 aside,
 details,
@@ -546,9 +560,9 @@ header .backButton {
 .card__link {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .card {
@@ -588,14 +602,15 @@ header .backButton {
 }
 .card__footer-like .fa-regular:hover::after, .card__footer-like .fa-regular:focus::after, .card__footer-like .fa-regular:active::after {
   opacity: 1;
+  animation: favorite 1000ms 100ms ease-in-out forwards;
 }
 .card__footer-like .fa-regular::after {
   content: "\f004";
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
@@ -648,14 +663,15 @@ header .backButton {
 }
 .menu__like .fa-regular:hover::after, .menu__like .fa-regular:focus::after, .menu__like .fa-regular:active::after {
   opacity: 1;
+  animation: favorite 1000ms 100ms ease-in-out forwards;
 }
 .menu__like .fa-regular::after {
   content: "\f004";
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
