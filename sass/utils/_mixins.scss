@@ -51,4 +51,9 @@
         z-index: 1;
         transition: opacity 400ms ease-in-out;
     }
+
+    input {
+        @include tablecloth;
+        display: none;
+    }
 }
