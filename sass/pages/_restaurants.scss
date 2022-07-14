@@ -52,16 +52,71 @@
         .meals {
             @include menuLabel;
             margin-bottom: 2rem;
+            align-items: center;
+            height: 5rem;
+            overflow: hidden;
+
 
             &__info {
                 display: flex;
                 flex-direction: column;
+                padding-inline: 1rem;
+
             }
 
-            &__price {
-                font-weight: 700;
-                padding-right: 1.3rem;
+            &__selection {
+                width: 10rem;
+                height: 100%;
+                display: flex;
+                margin-right: -5rem;
+                transition: all 300ms ease-in-out;
+
+                &:hover,
+                &:focus,
+                &:active {
+                    margin-right: 0;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    &::after {
+                        transform: rotate(1turn);
+                    }
+                }
+
+                &-price {
+                    font-weight: 700;
+                    width: 6rem;
+                    @include flex(flex-end);
+                    padding: 1rem;
+                    position: relative;
+                }
+
+                &::after {
+                    content: "\f058";
+                    font-family: 'Font Awesome\ 6 Free';
+                    font-size: 2rem;
+                    background-color: $colorTertiary;
+                    color: white;
+                    @include flex;
+                    width: 6rem;
+                    border-radius: 0 1rem 1rem 0;
+                    transition: transform 800ms 150ms;
+                    overflow: hidden;
+                }
             }
         }
     }
 }
+
+// &-check {
+//     background-color: lightblue;
+//         width: 50%;
+//         font-weight: 700;
+//         display: flex;
+//         align-items: flex-end;
+//         justify-content: center;
+//         height: 100%;
+//         padding-bottom: 1rem;
+// }

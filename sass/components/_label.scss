@@ -13,11 +13,10 @@
     @include baseButton;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 1rem 1rem;
     font-weight: 400;
     font-size: 1.17rem;
     background-color: #fff;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
 }
 
 @mixin labelNew {
