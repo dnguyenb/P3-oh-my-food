@@ -5,18 +5,18 @@
 
     &__title {
         font-family: $fontTitle;
-        font-size: $fontLarge;
+        font-size: 1.5rem;
         font-weight: 400;
         margin-bottom: 1rem;
     }
 
     &__item {
-        font-size: $fontMedium;
+        font-size: 1.3rem;
         line-height: 2rem;
 
         i {
             width: 20px;
-            margin-right: 0.5rem;
+            margin-right: 1.1rem;
         }
 
         &:focus,

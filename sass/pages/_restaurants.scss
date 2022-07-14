@@ -32,7 +32,7 @@
         border-radius: 2rem 2rem 0 0;
 
         h2 {
-            font-family: $fontTitle;
+            font-family: $fontTitle, sans-serif;
             font-weight: 400;
         }
     }
@@ -49,21 +49,16 @@
             margin-bottom: 2rem;
         }
 
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        li {
+        .meals {
             @include menuLabel;
+            margin-bottom: 2rem;
 
-            .meals__info {
+            &__info {
                 display: flex;
                 flex-direction: column;
             }
 
-            .meals__selection {
+            &__price {
                 font-weight: 700;
                 padding-right: 1.3rem;
             }

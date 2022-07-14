@@ -6,7 +6,6 @@
 		@include shadow;
 		@include flex;
 		padding: 2rem 0 1rem;
-		position: relative;
 
 		.backButton {
 			@include backButton;

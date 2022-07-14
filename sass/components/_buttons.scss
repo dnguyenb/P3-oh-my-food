@@ -1,5 +1,6 @@
 @mixin baseButton {
     display: flex;
+    align-items: center;
     cursor: pointer;
     border-radius: 1.5rem;
     border: none;
@@ -9,10 +10,9 @@
 }
 
 @mixin buttonPink {
-    @include flex;
     @include baseButton;
     font-weight: 700;
-    font-size: $fontMedium;
+    font-size: 1.3rem;
     border-radius: 2rem;
     padding: 1.3rem 2.5rem;
     color: #fff;

@@ -7,22 +7,21 @@
     flex-direction: $flex-direction;
 }
 
-@mixin tablecloth {
+@mixin linkOver {
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
 }
 
 // | SHADOW EFFECT
 
 @mixin shadow {
     box-shadow: 0 2px 10px $colorShdw;
-}
-
-@mixin hoverShadow {
-    box-shadow: 0 6px 10px 2px darken($colorShdw, 100%);
+    &:hover {
+        box-shadow: 0 6px 10px 2px darken($colorShdw, 100%);
+    }
 }
 
 // HEART EFFECT
@@ -35,13 +34,13 @@
     &:active {
         &::after {
             opacity: 1;
-            animation: favorite 1000ms 100ms ease-in-out forwards;
+            animation: like 1000ms 100ms ease-in-out forwards;
         }
     }
 
     &::after {
         content: "\f004";
-        @include tablecloth;
+        @include linkOver;
         background: $colorGradient;
         background-clip: text;
         -webkit-background-clip: text;
@@ -50,10 +49,5 @@
         opacity: 0;
         z-index: 1;
         transition: opacity 400ms ease-in-out;
-    }
-
-    input {
-        @include tablecloth;
-        display: none;
     }
 }

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@keyframes favorite {
+@keyframes like {
   0% {
     transform: scale(1);
     opacity: 0;
@@ -11,6 +11,14 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+@keyframes shake {
+  25% {
+    transform: translateX(3%);
+  }
+  75% {
+    transform: translateX(-3%);
   }
 }
 article,
@@ -290,7 +298,9 @@ header {
   justify-content: center;
   flex-direction: row;
   padding: 2rem 0 1rem;
-  position: relative;
+}
+header:hover {
+  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
 }
 header .backButton {
   display: block;
@@ -309,7 +319,7 @@ header .backButton {
   padding: 2rem;
 }
 .footer__title {
-  font-family: "shrikhand", sans-serif;
+  font-family: "shrikhand";
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -320,7 +330,7 @@ header .backButton {
 }
 .footer__item i {
   width: 20px;
-  margin-right: 0.5rem;
+  margin-right: 1.1rem;
 }
 .footer__item:focus, .footer__item:hover {
   color: #ff79da;
@@ -363,18 +373,21 @@ header .backButton {
   background-color: #e4e4e4;
 }
 .location__label {
-  margin-left: 1.5rem;
-  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 3rem;
 }
 .location__icon {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 .location__input {
   border: none;
   background-color: #e4e4e4;
   font-weight: 700;
   padding-left: 0.5rem;
-  width: 200px;
+  width: 10rem;
   max-width: 100%;
   height: 2.5rem;
   font-size: 1.12rem;
@@ -384,8 +397,7 @@ header .backButton {
   opacity: 0.7;
 }
 .location__button {
-  width: 2.8rem;
-  height: 2.5rem;
+  width: 3rem;
   border: none;
   border-radius: 0 0.75rem 0.75rem 0;
   background-color: #e4e4e4;
@@ -415,9 +427,6 @@ header .backButton {
 .explore__btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  display: flex;
   cursor: pointer;
   border-radius: 1.5rem;
   border: none;
@@ -432,9 +441,11 @@ header .backButton {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 .explore__btn:hover {
+  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.explore__btn:hover {
   transform: scale(1.05);
   opacity: 0.75;
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
 .howto {
@@ -452,6 +463,7 @@ header .backButton {
 }
 .howto__list li {
   display: flex;
+  align-items: center;
   cursor: pointer;
   border-radius: 1.5rem;
   border: none;
@@ -466,6 +478,13 @@ header .backButton {
   background-color: #f2f2f2;
   gap: 1.8rem;
   position: relative;
+}
+.howto__list li:hover {
+  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.howto__list li i {
+  opacity: 0.5;
+  font-size: 1.5rem;
 }
 .howto__list li::before {
   display: flex;
@@ -486,16 +505,11 @@ header .backButton {
 .howto__list li:hover,
 .howto__list li:focus {
   background-color: #f2eafb;
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
 }
 .howto__list li:hover > i,
 .howto__list li:focus > i {
   color: #9356dc;
   opacity: 1;
-}
-.howto__list li i {
-  opacity: 0.5;
-  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -544,14 +558,6 @@ header .backButton {
   border-radius: 0.2rem;
 }
 
-.card__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 .card {
   width: 100%;
   border-radius: 1.3rem;
@@ -559,6 +565,16 @@ header .backButton {
   overflow: hidden;
   transition: all 400ms;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.card:hover {
+  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.card__link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 .card__img {
   width: 100%;
@@ -589,15 +605,15 @@ header .backButton {
 }
 .card__footer-like .fa-regular:hover::after, .card__footer-like .fa-regular:focus::after, .card__footer-like .fa-regular:active::after {
   opacity: 1;
-  animation: favorite 1000ms 100ms ease-in-out forwards;
+  animation: like 1000ms 100ms ease-in-out forwards;
 }
 .card__footer-like .fa-regular::after {
   content: "\f004";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
@@ -607,18 +623,11 @@ header .backButton {
   z-index: 1;
   transition: opacity 400ms ease-in-out;
 }
-.card__footer-like .fa-regular input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
 
-.card:focus,
-.card:hover {
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+.card:focus::before,
+.card:hover::before {
+  animation: shake 150ms 200ms ease-in-out;
+  animation-iteration-count: 4;
 }
 
 @media screen and (min-width: 768px) {
@@ -659,15 +668,15 @@ header .backButton {
 }
 .menu__like .fa-regular:hover::after, .menu__like .fa-regular:focus::after, .menu__like .fa-regular:active::after {
   opacity: 1;
-  animation: favorite 1000ms 100ms ease-in-out forwards;
+  animation: like 1000ms 100ms ease-in-out forwards;
 }
 .menu__like .fa-regular::after {
   content: "\f004";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
@@ -676,14 +685,6 @@ header .backButton {
   opacity: 0;
   z-index: 1;
   transition: opacity 400ms ease-in-out;
-}
-.menu__like .fa-regular input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: none;
 }
 .menu__title {
   display: flex;
@@ -708,13 +709,9 @@ header .backButton {
   width: 3rem;
   margin-bottom: 2rem;
 }
-.menu article ul {
+.menu article .meals {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.menu article li {
-  display: flex;
+  align-items: center;
   cursor: pointer;
   border-radius: 1.5rem;
   border: none;
@@ -728,12 +725,16 @@ header .backButton {
   font-size: 1.17rem;
   background-color: #fff;
   border-radius: 1.5rem;
+  margin-bottom: 2rem;
 }
-.menu article li .meals__info {
+.menu article .meals:hover {
+  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.menu article .meals__info {
   display: flex;
   flex-direction: column;
 }
-.menu article li .meals__selection {
+.menu article .meals__price {
   font-weight: 700;
   padding-right: 1.3rem;
 }
