@@ -1,4 +1,12 @@
 @charset "UTF-8";
+@keyframes shake {
+  25% {
+    transform: translateX(3%);
+  }
+  75% {
+    transform: translateX(-3%);
+  }
+}
 @keyframes like {
   0% {
     transform: scale(1);
@@ -13,14 +21,15 @@
     opacity: 1;
   }
 }
-@keyframes shake {
-  25% {
-    transform: translateX(3%);
+@keyframes checked {
+  0% {
+    transform: rotate(90deg);
   }
-  75% {
-    transform: translateX(-3%);
+  100% {
+    transform: rotate(360deg);
   }
 }
+@keyframes appearance {}
 article,
 aside,
 details,
@@ -282,9 +291,21 @@ h2 {
   font-size: 2rem;
 }
 
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
 h3,
 h4 {
   margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
 }
 
 header {
@@ -425,6 +446,8 @@ header .backButton {
 .explore__btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
   cursor: pointer;
   border-radius: 1.5rem;
   border: none;
@@ -462,6 +485,8 @@ header .backButton {
 .howto__list li {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
   cursor: pointer;
   border-radius: 1.5rem;
   border: none;
@@ -654,6 +679,11 @@ header .backButton {
   border-radius: 3.5rem 3.5rem 0 0;
   background-color: #f2f2f2;
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-direction: column;
 }
 .menu__like {
   display: grid;
@@ -693,13 +723,15 @@ header .backButton {
   flex-direction: row;
   padding: 2rem 1rem 2rem 0;
   border-radius: 2rem 2rem 0 0;
+  width: 100%;
 }
 .menu__title h2 {
   font-family: "shrikhand", sans-serif;
   font-weight: 400;
 }
 .menu article {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+  width: 100%;
 }
 .menu article h3 {
   text-transform: uppercase;
@@ -712,6 +744,8 @@ header .backButton {
 .menu article .meals {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: row;
   cursor: pointer;
   border-radius: 1.5rem;
   border: none;
@@ -726,11 +760,17 @@ header .backButton {
   border-radius: 1rem;
   margin-bottom: 2rem;
   align-items: center;
-  height: 5rem;
+  height: 5.5rem;
   overflow: hidden;
 }
 .menu article .meals:hover {
   box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.menu article .meals:hover .meals__selection, .menu article .meals:focus .meals__selection {
+  margin-right: 0;
+}
+.menu article .meals:hover .meals__selection i, .menu article .meals:focus .meals__selection i {
+  animation: checked 400ms 100ms ease-in-out;
 }
 .menu article .meals__info {
   display: flex;
@@ -742,15 +782,10 @@ header .backButton {
   height: 100%;
   display: flex;
   margin-right: -5rem;
-  transition: all 300ms ease-in-out;
-}
-.menu article .meals__selection:hover, .menu article .meals__selection:focus, .menu article .meals__selection:active {
-  margin-right: 0;
-}
-.menu article .meals__selection:hover::after, .menu article .meals__selection:focus::after, .menu article .meals__selection:active::after {
-  transform: rotate(1turn);
+  transition: all 400ms ease-in-out;
 }
 .menu article .meals__selection-price {
+  font-size: 1.2rem;
   font-weight: 700;
   width: 6rem;
   display: flex;
@@ -758,11 +793,8 @@ header .backButton {
   justify-content: center;
   flex-direction: row;
   padding: 1rem;
-  position: relative;
 }
-.menu article .meals__selection::after {
-  content: "\f058";
-  font-family: "Font Awesome 6 Free";
+.menu article .meals__selection-check {
   font-size: 2rem;
   background-color: #99e2d0;
   color: white;
@@ -772,8 +804,29 @@ header .backButton {
   flex-direction: row;
   width: 6rem;
   border-radius: 0 1rem 1rem 0;
-  transition: transform 800ms 150ms;
   overflow: hidden;
+}
+.menu .orderButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  border: none;
+  min-width: 12.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: all 400ms ease-in-out;
+  font-weight: 700;
+  font-size: 1.3rem;
+  border-radius: 2rem;
+  padding: 1.3rem 2.5rem;
+  color: #fff;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  margin-bottom: 4rem;
+}
+.menu .orderButton:hover {
+  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=styles.css.map */

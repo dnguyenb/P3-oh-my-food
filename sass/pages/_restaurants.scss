@@ -1,3 +1,5 @@
+// RESTAURANT PHOTO
+
 .hero {
     width: 100%;
 
@@ -8,12 +10,16 @@
     }
 }
 
+// MENU 
+
 .menu {
     width: 100%;
     margin-top: -4rem;
     border-radius: 3.5rem 3.5rem 0 0;
     background-color: $colorBackgroundLight;
     padding: 1rem;
+    @include flex;
+    flex-direction: column;
 
     &__like {
         display: grid;
@@ -30,6 +36,7 @@
         @include flex ($justify-content: space-between);
         padding: 2rem 1rem 2rem 0;
         border-radius: 2rem 2rem 0 0;
+        width: 100%;
 
         h2 {
             font-family: $fontTitle, sans-serif;
@@ -38,7 +45,8 @@
     }
 
     article {
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
+        width: 100%;
 
         h3 {
             text-transform: uppercase;
@@ -53,15 +61,24 @@
             @include menuLabel;
             margin-bottom: 2rem;
             align-items: center;
-            height: 5rem;
+            height: 5.5rem;
             overflow: hidden;
 
+            &:hover,
+            &:focus {
+                .meals__selection {
+                    margin-right: 0;
+
+                    i {
+                        animation: checked 400ms 100ms ease-in-out;
+                    }
+                }
+            }
 
             &__info {
                 display: flex;
                 flex-direction: column;
                 padding-inline: 1rem;
-
             }
 
             &__selection {
@@ -69,54 +86,31 @@
                 height: 100%;
                 display: flex;
                 margin-right: -5rem;
-                transition: all 300ms ease-in-out;
-
-                &:hover,
-                &:focus,
-                &:active {
-                    margin-right: 0;
-                }
-
-                &:hover,
-                &:focus,
-                &:active {
-                    &::after {
-                        transform: rotate(1turn);
-                    }
-                }
+                transition: all 400ms ease-in-out;
 
                 &-price {
+                    font-size: 1.2rem;
                     font-weight: 700;
                     width: 6rem;
                     @include flex(flex-end);
                     padding: 1rem;
-                    position: relative;
                 }
 
-                &::after {
-                    content: "\f058";
-                    font-family: 'Font Awesome\ 6 Free';
+                &-check {
                     font-size: 2rem;
                     background-color: $colorTertiary;
                     color: white;
                     @include flex;
                     width: 6rem;
                     border-radius: 0 1rem 1rem 0;
-                    transition: transform 800ms 150ms;
                     overflow: hidden;
                 }
             }
         }
     }
-}
 
-// &-check {
-//     background-color: lightblue;
-//         width: 50%;
-//         font-weight: 700;
-//         display: flex;
-//         align-items: flex-end;
-//         justify-content: center;
-//         height: 100%;
-//         padding-bottom: 1rem;
-// }
+    .orderButton {
+        @include pinkButton;
+        margin-bottom: 4rem;
+    }
+}

@@ -61,7 +61,7 @@
     }
 
     &__btn {
-        @include buttonPink;
+        @include pinkButton;
 
         &:hover {
             transform: scale(1.05);

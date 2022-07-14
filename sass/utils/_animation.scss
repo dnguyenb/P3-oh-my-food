@@ -1,4 +1,16 @@
-// HEART ANIMATION
+// HOMEPAGE LABEL "NEW" SHAKE
+
+@keyframes shake {
+    25% {
+        transform: translateX(3%);
+    }
+
+    75% {
+        transform: translateX(-3%);
+    }
+}
+
+// HOMEPAGE AND MENU HEART ANIMATION
 @keyframes like {
     0% {
         transform: scale(1);
@@ -16,12 +28,17 @@
     }
 }
 
-@keyframes shake {
-    25% {
-        transform: translateX(3%);
+// MENU CHECKED MARKUP ROTATION
+
+@keyframes checked {
+    0% {
+        transform: rotate(90deg);
     }
 
-    75% {
-        transform: translateX(-3%);
+    100% {
+        transform: rotate(360deg);
     }
 }
+
+// MENU SELECTION APPEARANCE
+@keyframes appearance {}
