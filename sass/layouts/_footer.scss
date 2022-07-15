@@ -7,12 +7,12 @@
         font-family: $fontTitle;
         font-size: 1.5rem;
         font-weight: 400;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     &__item {
         font-size: 1.3rem;
-        line-height: 2rem;
+        margin-bottom: 0.5rem;
 
         i {
             width: 20px;
@@ -30,7 +30,7 @@
     }
 }
 
-// rajout à activer après validation
+// rajout à activer après validation projet
 .fa-at,
 .fa-info {
     display: none;
@@ -39,8 +39,6 @@
 @media #{$tabletScreen} {
 
     .footer {
-        display: grid;
-        place-content: center;
 
         &__title {
             text-align: center;
@@ -48,13 +46,13 @@
 
         &__list {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            text-align: center;
+            grid-template-columns: repeat(2, 1fr);
+        }
 
         &__item {
-                @include flex;
-            }
+            display: grid;
+            place-content: center;
+            margin-bottom: 1rem;
         }
     }
-
 }

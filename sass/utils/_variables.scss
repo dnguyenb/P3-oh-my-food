@@ -21,3 +21,7 @@ $fontText: "roboto";
 // MEDIA QUERIES
 $tabletScreen: "screen and (min-width: 768px)";
 $desktopScreen: "screen and (min-width: 992px)";
+
+// ANIMATION
+$anim-dur: 2000ms;
+$anim-delay: $anim-dur / 9;

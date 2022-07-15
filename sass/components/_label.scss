@@ -19,7 +19,7 @@
     border-radius: 1rem;
 }
 
-@mixin labelNew {
+@mixin newLabel {
     content: "Nouveau";
     background-color: $colorTertiary;
     position: absolute;

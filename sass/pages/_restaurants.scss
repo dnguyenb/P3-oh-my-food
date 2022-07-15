@@ -12,6 +12,16 @@
 
 // MENU 
 
+.menu-wrapper {
+    width: 100%;
+
+    @media #{$tabletScreen} {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
 .menu {
     width: 100%;
     margin-top: -4rem;
@@ -38,6 +48,10 @@
         border-radius: 2rem 2rem 0 0;
         width: 100%;
 
+        @media #{$tabletScreen} {
+            width: 75%;
+        }
+
         h2 {
             font-family: $fontTitle, sans-serif;
             font-weight: 400;
@@ -54,15 +68,27 @@
             padding-bottom: 0.3rem;
             border-bottom: 3.5px solid $colorTertiary;
             width: 3rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .meals {
             @include menuLabel;
             margin-bottom: 2rem;
             align-items: center;
-            height: 5.5rem;
+            max-height: 6rem;
             overflow: hidden;
+            animation: show-up $anim-dur ease-in-out both;
+
+            @for $i from 1 through 10 {
+                &:nth-child(#{$i}) {
+                    animation-delay: $anim-delay * $i;
+                }
+            }
+
+            @media #{$tabletScreen} {
+                min-width: 18.2rem;
+                max-height: 12rem;
+            }
 
             &:hover,
             &:focus {
@@ -70,7 +96,7 @@
                     margin-right: 0;
 
                     i {
-                        animation: checked 400ms 100ms ease-in-out;
+                        animation: checked 400ms 100ms ease-in-out both;
                     }
                 }
             }
@@ -78,7 +104,8 @@
             &__info {
                 display: flex;
                 flex-direction: column;
-                padding-inline: 1rem;
+                padding: 1rem;
+
             }
 
             &__selection {
@@ -86,12 +113,17 @@
                 height: 100%;
                 display: flex;
                 margin-right: -5rem;
+                height: 6rem;
                 transition: all 400ms ease-in-out;
+
+                @media #{$tabletScreen} {
+                    height: 12rem;
+                }
 
                 &-price {
                     font-size: 1.2rem;
                     font-weight: 700;
-                    width: 6rem;
+                    width: 5rem;
                     @include flex(flex-end);
                     padding: 1rem;
                 }
@@ -101,7 +133,7 @@
                     background-color: $colorTertiary;
                     color: white;
                     @include flex;
-                    width: 6rem;
+                    width: 5rem;
                     border-radius: 0 1rem 1rem 0;
                     overflow: hidden;
                 }
@@ -111,6 +143,7 @@
 
     .orderButton {
         @include pinkButton;
+        width: 18rem;
         margin-bottom: 4rem;
     }
 }

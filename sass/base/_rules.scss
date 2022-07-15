@@ -13,9 +13,13 @@ html {
 body {
 	@include flex($flex-direction: column);
 	width: 100%;
-	min-width: 320px;
+	min-width: 420px;
 	min-height: 100vh;
 	font-family: $fontText, sans-serif;
+
+	@media #{$tabletScreen} {
+		min-width: 960px;
+	}
 }
 
 header,

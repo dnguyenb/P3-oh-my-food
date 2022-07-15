@@ -29,7 +29,16 @@
     transform: rotate(360deg);
   }
 }
-@keyframes appearance {}
+@keyframes show-up {
+  0% {
+    transform: translateY(1.5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 article,
 aside,
 details,
@@ -253,9 +262,14 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  min-width: 320px;
+  min-width: 420px;
   min-height: 100vh;
   font-family: "roboto", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  body {
+    min-width: 960px;
+  }
 }
 
 header,
@@ -322,7 +336,6 @@ header:hover {
   box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
 }
 header .backButton {
-  display: block;
   position: absolute;
   left: 3rem;
   top: 50%;
@@ -341,11 +354,11 @@ header .backButton {
   font-family: "shrikhand";
   font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .footer__item {
   font-size: 1.3rem;
-  line-height: 2rem;
+  margin-bottom: 0.5rem;
 }
 .footer__item i {
   width: 20px;
@@ -364,23 +377,17 @@ header .backButton {
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
-    display: grid;
-    place-content: center;
-  }
   .footer__title {
     text-align: center;
   }
   .footer__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .footer__list__item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
+  .footer__item {
+    display: grid;
+    place-content: center;
+    margin-bottom: 1rem;
   }
 }
 .location {
@@ -431,17 +438,17 @@ header .backButton {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  row-gap: 2rem;
   padding-top: 2.5rem;
-  padding-bottom: 5.6rem;
+  padding-bottom: 4rem;
   text-align: center;
   word-wrap: break-word;
   background-color: #f2f2f2;
-  margin-bottom: 3.75rem;
 }
 .explore p {
   opacity: 0.5;
   font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
 }
 .explore__btn {
   display: flex;
@@ -470,16 +477,20 @@ header .backButton {
 }
 
 .howto {
-  margin: 5rem 2rem;
+  margin: 4rem 2rem;
 }
 .howto__title {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .howto__title {
+    text-align: center;
+  }
 }
 .howto__list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-left: 1rem;
   counter-reset: step;
 }
 .howto__list li {
@@ -509,6 +520,17 @@ header .backButton {
   opacity: 0.5;
   font-size: 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .howto__list {
+    flex-flow: row nowrap;
+    width: 100%;
+    gap: 3rem;
+  }
+  .howto__list li {
+    justify-content: space-evenly;
+    width: 31%;
+  }
+}
 .howto__list li::before {
   display: flex;
   align-items: center;
@@ -535,26 +557,18 @@ header .backButton {
   opacity: 1;
 }
 
-@media screen and (min-width: 768px) {
-  .howto__title {
-    text-align: center;
-  }
-  .howto__list {
-    flex-flow: row nowrap;
-    width: 100%;
-  }
-  .howto__list li {
-    justify-content: space-evenly;
-    width: 31%;
-  }
-}
 .restaurants {
   background-color: #f2f2f2;
   padding: 5rem 2rem;
   width: 100%;
 }
 .restaurants__title {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__title .restaurants__title {
+    text-align: center;
+  }
 }
 .restaurants__list {
   display: flex;
@@ -562,6 +576,13 @@ header .backButton {
   justify-content: center;
   flex-direction: column;
   row-gap: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .restaurants__list .restaurants__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 .new {
@@ -628,7 +649,7 @@ header .backButton {
 }
 .card__footer-like .fa-regular:hover::after, .card__footer-like .fa-regular:focus::after, .card__footer-like .fa-regular:active::after {
   opacity: 1;
-  animation: like 1000ms 100ms ease-in-out forwards;
+  animation: like 1000ms 100ms ease-in-out both;
 }
 .card__footer-like .fa-regular::after {
   content: "\f004";
@@ -654,16 +675,6 @@ header .backButton {
   animation-iteration-count: 4;
 }
 
-@media screen and (min-width: 768px) {
-  .restaurants__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-  .restaurants__title {
-    text-align: center;
-  }
-}
 .hero {
   width: 100%;
 }
@@ -671,6 +682,17 @@ header .backButton {
   width: 100%;
   height: 22rem;
   object-fit: cover;
+}
+
+.menu-wrapper {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .menu-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
 
 .menu {
@@ -697,7 +719,7 @@ header .backButton {
 }
 .menu__like .fa-regular:hover::after, .menu__like .fa-regular:focus::after, .menu__like .fa-regular:active::after {
   opacity: 1;
-  animation: like 1000ms 100ms ease-in-out forwards;
+  animation: like 1000ms 100ms ease-in-out both;
 }
 .menu__like .fa-regular::after {
   content: "\f004";
@@ -725,6 +747,11 @@ header .backButton {
   border-radius: 2rem 2rem 0 0;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .menu__title {
+    width: 75%;
+  }
+}
 .menu__title h2 {
   font-family: "shrikhand", sans-serif;
   font-weight: 400;
@@ -739,7 +766,7 @@ header .backButton {
   padding-bottom: 0.3rem;
   border-bottom: 3.5px solid #99e2d0;
   width: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .menu article .meals {
   display: flex;
@@ -760,34 +787,77 @@ header .backButton {
   border-radius: 1rem;
   margin-bottom: 2rem;
   align-items: center;
-  height: 5.5rem;
+  max-height: 6rem;
   overflow: hidden;
+  animation: show-up 2000ms ease-in-out both;
 }
 .menu article .meals:hover {
   box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.menu article .meals:nth-child(1) {
+  animation-delay: 222.2222222222ms;
+}
+.menu article .meals:nth-child(2) {
+  animation-delay: 444.4444444444ms;
+}
+.menu article .meals:nth-child(3) {
+  animation-delay: 666.6666666667ms;
+}
+.menu article .meals:nth-child(4) {
+  animation-delay: 888.8888888889ms;
+}
+.menu article .meals:nth-child(5) {
+  animation-delay: 1111.1111111111ms;
+}
+.menu article .meals:nth-child(6) {
+  animation-delay: 1333.3333333333ms;
+}
+.menu article .meals:nth-child(7) {
+  animation-delay: 1555.5555555556ms;
+}
+.menu article .meals:nth-child(8) {
+  animation-delay: 1777.7777777778ms;
+}
+.menu article .meals:nth-child(9) {
+  animation-delay: 2000ms;
+}
+.menu article .meals:nth-child(10) {
+  animation-delay: 2222.2222222222ms;
+}
+@media screen and (min-width: 768px) {
+  .menu article .meals {
+    min-width: 18.2rem;
+    max-height: 12rem;
+  }
 }
 .menu article .meals:hover .meals__selection, .menu article .meals:focus .meals__selection {
   margin-right: 0;
 }
 .menu article .meals:hover .meals__selection i, .menu article .meals:focus .meals__selection i {
-  animation: checked 400ms 100ms ease-in-out;
+  animation: checked 400ms 100ms ease-in-out both;
 }
 .menu article .meals__info {
   display: flex;
   flex-direction: column;
-  padding-inline: 1rem;
+  padding: 1rem;
 }
 .menu article .meals__selection {
   width: 10rem;
   height: 100%;
   display: flex;
   margin-right: -5rem;
+  height: 6rem;
   transition: all 400ms ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .menu article .meals__selection {
+    height: 12rem;
+  }
 }
 .menu article .meals__selection-price {
   font-size: 1.2rem;
   font-weight: 700;
-  width: 6rem;
+  width: 5rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -802,7 +872,7 @@ header .backButton {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 6rem;
+  width: 5rem;
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
@@ -823,10 +893,15 @@ header .backButton {
   padding: 1.3rem 2.5rem;
   color: #fff;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  width: 18rem;
   margin-bottom: 4rem;
 }
 .menu .orderButton:hover {
   box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.menu .orderButton:hover {
+  transform: scale(1.05);
+  opacity: 0.75;
 }
 
 /*# sourceMappingURL=styles.css.map */

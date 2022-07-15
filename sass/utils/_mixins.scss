@@ -34,7 +34,7 @@
     &:active {
         &::after {
             opacity: 1;
-            animation: like 1000ms 100ms ease-in-out forwards;
+            animation: like 1000ms 100ms ease-in-out both;
         }
     }
 

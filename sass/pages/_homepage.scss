@@ -47,43 +47,41 @@
 
 .explore {
     @include flex($flex-direction: column);
-    row-gap: 2rem;
     padding-top: 2.5rem;
-    padding-bottom: 5.6rem;
+    padding-bottom: 4rem;
     text-align: center;
     word-wrap: break-word;
     background-color: $colorBackgroundLight;
-    margin-bottom: 3.75rem;
 
     p {
         opacity: 0.5;
         font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
     }
 
     &__btn {
         @include pinkButton;
-
-        &:hover {
-            transform: scale(1.05);
-            opacity: 0.75;
-        }
     }
 }
 
 // SECTION HOWTO
 
 .howto {
-    margin: 5rem 2rem;
+    margin: 4rem 2rem;
 
     &__title {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
+
+        @media #{$tabletScreen} {
+            text-align: center;
+        }
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        margin-left: 1rem;
         counter-reset: step;
 
         li {
@@ -93,6 +91,17 @@
             i {
                 opacity: 0.5;
                 font-size: 1.5rem;
+            }
+        }
+
+        @media #{$tabletScreen} {
+            flex-flow: row nowrap;
+            width: 100%;
+            gap: 3rem;
+
+            li {
+                justify-content: space-evenly;
+                width: 31%;
             }
         }
 
@@ -123,24 +132,6 @@
     }
 }
 
-// || TABLET breakpoint 768px
-
-@media #{$tabletScreen} {
-
-    .howto__title {
-        text-align: center;
-    }
-
-    .howto__list {
-        flex-flow: row nowrap;
-        width: 100%;
-
-        li {
-            justify-content: space-evenly;
-            width: 31%;
-        }
-    }
-}
 
 // SECTION RESTAURANTS
 
@@ -150,12 +141,30 @@
     width: 100%;
 
     &__title {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
+
+        @media #{$tabletScreen} {
+            // interpolation variable with #{}
+
+            .restaurants__title {
+                text-align: center;
+            }
+        }
     }
 
     &__list {
         @include flex ($flex-direction: column);
         row-gap: 2rem;
+
+        @media #{$tabletScreen} {
+            // interpolation variable with #{}
+
+            .restaurants__list {
+                display: grid; // most easier than flex
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
     }
 }
 
@@ -164,11 +173,10 @@
 }
 
 .new::before {
-    @include labelNew;
+    @include newLabel;
 }
 
 .card {
-    // width: min(100%, 500px);
     width: 100%;
     border-radius: 1.3rem;
     position: relative;
@@ -192,7 +200,7 @@
         height: 5.6rem;
 
         &-info {
-            @include flex ($align-items: flex-start, $justify-content: space-between, $flex-direction: column);
+            @include flex (flex-start, space-between, column);
 
             h3,
             p {
@@ -211,21 +219,5 @@
     &::before {
         animation: shake 150ms 200ms ease-in-out;
         animation-iteration-count: 4;
-    }
-}
-
-// || TABLET breakpoint 768px
-
-@media #{$tabletScreen} {
-    // interpolation variable with #{}
-
-    .restaurants__list {
-        display: grid; // most easier than flex
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .restaurants__title {
-        text-align: center;
     }
 }
