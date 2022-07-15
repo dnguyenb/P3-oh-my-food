@@ -1,9 +1,11 @@
 	header {
-		position: sticky;
-		top: 0;
-		z-index: 2;
+		position: relative;
 		background-color: #fff;
 		@include shadow;
-		@include flex-center;
-		padding: 1rem 0;
+		@include flex;
+		padding: 2rem 0 1rem;
+
+		.backButton {
+			@include backButton;
 	}
+}

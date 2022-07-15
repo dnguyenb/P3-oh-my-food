@@ -1,16 +1,21 @@
 // || Utils
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/extension";
+@import "./utils/animation";
 
 // || Base 
 @import "./base/normalize.scss";
 @import "./base/rules";
+@import "./base/typography";
+
+// || Components
+@import "./components/buttons";
+@import "./components/label";
 
 // || Layouts
 @import "./layouts/header";
-@import "./layouts/location";
-@import "./layouts/explore";
-@import "./layouts/howto";
-@import "./layouts/restaurants";
 @import "./layouts/footer";
+
+// || Pages
+@import "./pages/homepage";
+@import "./pages/restaurants";
