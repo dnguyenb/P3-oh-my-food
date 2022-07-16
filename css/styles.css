@@ -21,7 +21,7 @@
     opacity: 1;
   }
 }
-@keyframes checked {
+@keyframes check {
   0% {
     transform: rotate(90deg);
   }
@@ -37,6 +37,31 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@keyframes visible {
+  0% {
+    opacity: 1;
+    z-index: 1000;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes jump {
+  from {
+    transform: translateY(-2rem);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 article,
@@ -89,7 +114,7 @@ a {
   text-decoration: none;
 }
 a:focus {
-  outline: thin dotted;
+  outline: thin dotted #ff79da;
 }
 a:hover, a:active {
   outline: 0;
@@ -322,18 +347,78 @@ p {
   font-size: 1.1rem;
 }
 
+.loader-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: visible 4s ease-in-out both;
+  z-index: -1;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  font-family: "Shrikhand", sans-serif;
+  font-size: 4rem;
+}
+.loader__item--1 {
+  color: #9356dc;
+  animation: jump 300ms;
+  animation-delay: 800s;
+}
+.loader__item--2 {
+  color: #ff79da;
+  animation: jump 150ms;
+  animation-delay: 1100ms;
+}
+.loader__item--3 {
+  color: #9356dc;
+  animation: jump 300ms;
+  animation-delay: 1250ms;
+}
+.loader__item--4 {
+  color: #ff79da;
+  animation: jump 150ms;
+  animation-delay: 1550ms;
+}
+.loader__item--5 {
+  color: #9356dc;
+  animation: jump 300ms;
+  animation-delay: 1700ms;
+}
+.loader__item--6 {
+  color: #ff79da;
+  animation: jump 150ms;
+  animation-delay: 2000ms;
+}
+.loader__item--7 {
+  color: #9356dc;
+  animation: jump 300ms;
+  animation-delay: 2150ms;
+}
+.loader__item--8 {
+  color: #ff79da;
+  animation: jump 150ms;
+  animation-delay: 2450ms;
+}
+
 header {
   position: relative;
   background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   padding: 2rem 0 1rem;
-}
-header:hover {
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 header .backButton {
   position: absolute;
@@ -355,6 +440,30 @@ header .backButton {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
+  position: relative;
+}
+.footer__title:hover::before, .footer__title:focus::before {
+  opacity: 1;
+  transform: translateY(-90%);
+}
+.footer__title::before {
+  content: "\f102";
+  font-family: "Font Awesome 6 Free";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+  opacity: 0;
+  z-index: 1;
+  font-size: 2rem;
+  transition: all 100ms ease-in-out;
+  transition: transform 200ms;
 }
 .footer__item {
   font-size: 1.3rem;
@@ -363,17 +472,16 @@ header .backButton {
 .footer__item i {
   width: 20px;
   margin-right: 1.1rem;
+  text-align: center;
 }
 .footer__item:focus, .footer__item:hover {
   color: #ff79da;
 }
+.footer__item:focus i, .footer__item:hover i {
+  animation: like 600ms 200ms ease-in-out both;
+}
 .footer__item:active {
   color: #9356dc;
-}
-
-.fa-at,
-.fa-info {
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -381,13 +489,12 @@ header .backButton {
     text-align: center;
   }
   .footer__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .footer__item {
-    display: grid;
-    place-content: center;
-    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 1rem 6rem;
   }
 }
 .location {
@@ -417,7 +524,9 @@ header .backButton {
   max-width: 100%;
   height: 2.5rem;
   font-size: 1.12rem;
-  outline: none;
+}
+.location__input:focus {
+  outline: 1px dashed #ff79da;
 }
 .location__input::placeholder {
   opacity: 0.7;
@@ -459,7 +568,7 @@ header .backButton {
   border-radius: 1.5rem;
   border: none;
   min-width: 12.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   transition: all 400ms ease-in-out;
   font-weight: 700;
   font-size: 1.3rem;
@@ -469,7 +578,7 @@ header .backButton {
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
 .explore__btn:hover {
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .explore__btn:hover {
   transform: scale(1.05);
@@ -502,7 +611,7 @@ header .backButton {
   border-radius: 1.5rem;
   border: none;
   min-width: 12.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   transition: all 400ms ease-in-out;
   justify-content: flex-start;
   border-radius: 1.5rem;
@@ -514,7 +623,7 @@ header .backButton {
   position: relative;
 }
 .howto__list li:hover {
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .howto__list li i {
   opacity: 0.5;
@@ -566,7 +675,7 @@ header .backButton {
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 768px) {
-  .restaurants__title .restaurants__title {
+  .restaurants__title {
     text-align: center;
   }
 }
@@ -578,10 +687,11 @@ header .backButton {
   row-gap: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .restaurants__list .restaurants__list {
+  .restaurants__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 4rem;
+    padding-inline: 4rem;
   }
 }
 
@@ -608,10 +718,10 @@ header .backButton {
   position: relative;
   overflow: hidden;
   transition: all 400ms;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
 .card:hover {
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .card__link {
   position: absolute;
@@ -666,7 +776,8 @@ header .backButton {
   font-weight: 700;
   opacity: 0;
   z-index: 1;
-  transition: opacity 400ms ease-in-out;
+  font-size: 2rem;
+  transition: all 100ms ease-in-out;
 }
 
 .card:focus::before,
@@ -736,7 +847,8 @@ header .backButton {
   font-weight: 700;
   opacity: 0;
   z-index: 1;
-  transition: opacity 400ms ease-in-out;
+  font-size: 2rem;
+  transition: all 100ms ease-in-out;
 }
 .menu__title {
   display: flex;
@@ -777,7 +889,7 @@ header .backButton {
   border-radius: 1.5rem;
   border: none;
   min-width: 12.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   transition: all 400ms ease-in-out;
   justify-content: space-between;
   align-items: flex-end;
@@ -792,37 +904,37 @@ header .backButton {
   animation: show-up 2000ms ease-in-out both;
 }
 .menu article .meals:hover {
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .menu article .meals:nth-child(1) {
-  animation-delay: 222.2222222222ms;
+  animation-delay: 200ms;
 }
 .menu article .meals:nth-child(2) {
-  animation-delay: 444.4444444444ms;
+  animation-delay: 400ms;
 }
 .menu article .meals:nth-child(3) {
-  animation-delay: 666.6666666667ms;
+  animation-delay: 600ms;
 }
 .menu article .meals:nth-child(4) {
-  animation-delay: 888.8888888889ms;
+  animation-delay: 800ms;
 }
 .menu article .meals:nth-child(5) {
-  animation-delay: 1111.1111111111ms;
+  animation-delay: 1000ms;
 }
 .menu article .meals:nth-child(6) {
-  animation-delay: 1333.3333333333ms;
+  animation-delay: 1200ms;
 }
 .menu article .meals:nth-child(7) {
-  animation-delay: 1555.5555555556ms;
+  animation-delay: 1400ms;
 }
 .menu article .meals:nth-child(8) {
-  animation-delay: 1777.7777777778ms;
+  animation-delay: 1600ms;
 }
 .menu article .meals:nth-child(9) {
-  animation-delay: 2000ms;
+  animation-delay: 1800ms;
 }
 .menu article .meals:nth-child(10) {
-  animation-delay: 2222.2222222222ms;
+  animation-delay: 2000ms;
 }
 @media screen and (min-width: 768px) {
   .menu article .meals {
@@ -834,7 +946,7 @@ header .backButton {
   margin-right: 0;
 }
 .menu article .meals:hover .meals__selection i, .menu article .meals:focus .meals__selection i {
-  animation: checked 400ms 100ms ease-in-out both;
+  animation: check 400ms 100ms ease-in-out both;
 }
 .menu article .meals__info {
   display: flex;
@@ -876,7 +988,7 @@ header .backButton {
   border-radius: 0 1rem 1rem 0;
   overflow: hidden;
 }
-.menu .orderButton {
+.menu .order-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -885,7 +997,7 @@ header .backButton {
   border-radius: 1.5rem;
   border: none;
   min-width: 12.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   transition: all 400ms ease-in-out;
   font-weight: 700;
   font-size: 1.3rem;
@@ -896,10 +1008,10 @@ header .backButton {
   width: 18rem;
   margin-bottom: 4rem;
 }
-.menu .orderButton:hover {
-  box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.4);
+.menu .order-btn:hover {
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
-.menu .orderButton:hover {
+.menu .order-btn:hover {
   transform: scale(1.05);
   opacity: 0.75;
 }

@@ -11,6 +11,7 @@
 }
 
 // HOMEPAGE AND MENU HEART ANIMATION
+
 @keyframes like {
     0% {
         transform: scale(1);
@@ -30,7 +31,7 @@
 
 // MENU CHECKED MARKUP ROTATION
 
-@keyframes checked {
+@keyframes check {
     0% {
         transform: rotate(90deg);
     }
@@ -41,6 +42,7 @@
 }
 
 // MENU SELECTION APPEARANCE
+
 @keyframes show-up {
     0% {
         transform: translateY(1.5rem);
@@ -50,5 +52,38 @@
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+// LOADER ANIMATION
+
+@keyframes visible {
+    0% {
+        opacity: 1;
+        z-index: 1000;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes jump {
+    from {
+        transform: translateY(-2rem);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }

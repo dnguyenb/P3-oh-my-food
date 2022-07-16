@@ -1,16 +1,16 @@
-@mixin howToLabel {
-    @include baseButton;
+@mixin howto-label {
+    @include base-btn;
     justify-content: flex-start;
     border-radius: 1.5rem;
     padding: 2rem 2.5rem;
     font-weight: 700;
     font-size: 1.3rem;
-    background-color: $colorBackgroundLight;
+    background-color: $color-bg-light;
     gap: 1.8rem;
 }
 
-@mixin menuLabel {
-    @include baseButton;
+@mixin menu-label {
+    @include base-btn;
     justify-content: space-between;
     align-items: flex-end;
     font-weight: 400;
@@ -19,15 +19,15 @@
     border-radius: 1rem;
 }
 
-@mixin newLabel {
+@mixin new-label {
     content: "Nouveau";
-    background-color: $colorTertiary;
+    background-color: $color-tertiary;
     position: absolute;
     top: 1rem;
     right: 1rem;
     font-size: 1rem;
     font-weight: 700;
-    color: darken($colorTertiary, 40);
+    color: darken($color-tertiary, 40);
     padding: 0.5rem 0.8rem;
     border-radius: 0.2rem;
 }

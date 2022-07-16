@@ -1,11 +1,12 @@
 	header {
 		position: relative;
 		background-color: #fff;
-		@include shadow;
+		box-shadow: 0 3px 6px $color-shadow;
 		@include flex;
 		padding: 2rem 0 1rem;
+		z-index: 1;
 
 		.backButton {
-			@include backButton;
+			@include back-btn;
 	}
 }

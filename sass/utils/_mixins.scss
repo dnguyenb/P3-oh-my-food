@@ -7,7 +7,7 @@
     flex-direction: $flex-direction;
 }
 
-@mixin linkOver {
+@mixin link-over {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -18,14 +18,16 @@
 // | SHADOW EFFECT
 
 @mixin shadow {
-    box-shadow: 0 2px 10px $colorShdw;
+    box-shadow: 0 3px 6px $color-shadow;
+
     &:hover {
-        box-shadow: 0 6px 10px 2px darken($colorShdw, 100%);
+        box-shadow: 0 19px 38px darken($color-shadow, 100%);
     }
 }
 
 // HEART EFFECT
-@mixin heartGradient {
+
+@mixin heart-gradient {
     position: relative;
     cursor: pointer;
 
@@ -40,15 +42,20 @@
 
     &::after {
         content: "\f004";
-        font-family: 'Font Awesome\ 6 Free';
-        @include linkOver;
-        background: $colorGradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        font-weight: 700;
-        opacity: 0;
-        z-index: 1;
-        transition: opacity 400ms ease-in-out;
+        @include pseudo-element-gradient-icon;
     }
+}
+
+@mixin pseudo-element-gradient-icon {
+    font-family: 'Font Awesome\ 6 Free';
+    @include link-over;
+    background: $color-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    opacity: 0;
+    z-index: 1;
+    font-size: 2rem;
+    transition: all 100ms ease-in-out;
 }

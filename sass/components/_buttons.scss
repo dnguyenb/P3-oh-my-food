@@ -1,4 +1,4 @@
-@mixin baseButton {
+@mixin base-btn {
     @include flex;
     cursor: pointer;
     border-radius: 1.5rem;
@@ -8,14 +8,14 @@
     transition: all 400ms ease-in-out;
 }
 
-@mixin pinkButton {
-    @include baseButton;
+@mixin pink-btn {
+    @include base-btn;
     font-weight: 700;
     font-size: 1.3rem;
     border-radius: 2rem;
     padding: 1.3rem 2.5rem;
     color: #fff;
-    background-image: $colorGradient;
+    background-image: $color-gradient;
 
     &:hover {
             transform: scale(1.05);
@@ -23,7 +23,7 @@
         }
 }
 
-@mixin backButton {
+@mixin back-btn {
     position: absolute;
     left: 3rem;
     top: 50%;

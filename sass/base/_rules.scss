@@ -15,9 +15,9 @@ body {
 	width: 100%;
 	min-width: 420px;
 	min-height: 100vh;
-	font-family: $fontText, sans-serif;
+	font-family: $font-text, sans-serif;
 
-	@media #{$tabletScreen} {
+	@media #{$tablet-screen} {
 		min-width: 960px;
 	}
 }

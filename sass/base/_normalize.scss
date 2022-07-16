@@ -126,7 +126,7 @@ a {
 	// 2
 
 	&:focus {
-		outline: thin dotted;
+		outline: thin dotted $color-secondary;
 	}
 
 	// 3

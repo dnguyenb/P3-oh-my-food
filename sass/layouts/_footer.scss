@@ -1,13 +1,28 @@
 .footer {
-    background-color: $colorFooter;
+    background-color: $color-footer;
     color: #fff;
     padding: 2rem;
 
     &__title {
-        font-family: $fontTitle;
+        font-family: $font-title;
         font-size: 1.5rem;
         font-weight: 400;
         margin-bottom: 1.5rem;
+        position: relative;
+
+        &:hover,
+        &:focus {
+            &::before {
+                opacity: 1;
+                transform: translateY(-90%);
+            }
+        }
+
+        &::before {
+            content: "\f102";
+            @include pseudo-element-gradient-icon;
+            transition: transform 200ms;
+        }
     }
 
     &__item {
@@ -17,26 +32,30 @@
         i {
             width: 20px;
             margin-right: 1.1rem;
+            text-align: center;
         }
 
         &:focus,
         &:hover {
-            color: $colorSecondary;
+            color: $color-secondary;
+
+            & i {
+                animation: like 600ms 200ms ease-in-out both;
+            }
         }
 
         &:active {
-            color: $colorPrimary;
+            color: $color-primary;
         }
     }
 }
 
-// rajout à activer après validation projet
-.fa-at,
-.fa-info {
-    display: none;
-}
+// .fa-at,
+// .fa-info {
+//     display: none;
+// }
 
-@media #{$tabletScreen} {
+@media #{$tablet-screen} {
 
     .footer {
 
@@ -45,14 +64,9 @@
         }
 
         &__list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        &__item {
-            display: grid;
-            place-content: center;
-            margin-bottom: 1rem;
+            @include flex ($justify-content: center);
+            gap: 3rem;
+            padding: 1rem 6rem;
         }
     }
 }

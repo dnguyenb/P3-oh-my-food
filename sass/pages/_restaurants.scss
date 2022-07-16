@@ -15,7 +15,7 @@
 .menu-wrapper {
     width: 100%;
 
-    @media #{$tabletScreen} {
+    @media #{$tablet-screen} {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
@@ -26,7 +26,7 @@
     width: 100%;
     margin-top: -4rem;
     border-radius: 3.5rem 3.5rem 0 0;
-    background-color: $colorBackgroundLight;
+    background-color: $color-bg-light;
     padding: 1rem;
     @include flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
         height: 3rem;
 
         .fa-regular {
-            @include heartGradient;
+            @include heart-gradient;
         }
     }
 
@@ -48,12 +48,12 @@
         border-radius: 2rem 2rem 0 0;
         width: 100%;
 
-        @media #{$tabletScreen} {
+        @media #{$tablet-screen} {
             width: 75%;
         }
 
         h2 {
-            font-family: $fontTitle, sans-serif;
+            font-family: $font-title, sans-serif;
             font-weight: 400;
         }
     }
@@ -66,13 +66,13 @@
             text-transform: uppercase;
             font-weight: 400;
             padding-bottom: 0.3rem;
-            border-bottom: 3.5px solid $colorTertiary;
+            border-bottom: 3.5px solid $color-tertiary;
             width: 3rem;
             margin-bottom: 3rem;
         }
 
         .meals {
-            @include menuLabel;
+            @include menu-label;
             margin-bottom: 2rem;
             align-items: center;
             max-height: 6rem;
@@ -85,7 +85,7 @@
                 }
             }
 
-            @media #{$tabletScreen} {
+            @media #{$tablet-screen} {
                 min-width: 18.2rem;
                 max-height: 12rem;
             }
@@ -96,7 +96,7 @@
                     margin-right: 0;
 
                     i {
-                        animation: checked 400ms 100ms ease-in-out both;
+                        animation: check 400ms 100ms ease-in-out both;
                     }
                 }
             }
@@ -116,7 +116,7 @@
                 height: 6rem;
                 transition: all 400ms ease-in-out;
 
-                @media #{$tabletScreen} {
+                @media #{$tablet-screen} {
                     height: 12rem;
                 }
 
@@ -130,7 +130,7 @@
 
                 &-check {
                     font-size: 2rem;
-                    background-color: $colorTertiary;
+                    background-color: $color-tertiary;
                     color: white;
                     @include flex;
                     width: 5rem;
@@ -141,8 +141,8 @@
         }
     }
 
-    .orderButton {
-        @include pinkButton;
+    .order-btn {
+        @include pink-btn;
         width: 18rem;
         margin-bottom: 4rem;
     }
