@@ -475,12 +475,8 @@ header .backButton {
     text-align: center;
   }
   .footer__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  .footer__item {
-    padding-left: 10rem;
+    display: flex;
+    justify-content: space-evenly;
   }
 }
 .location {
