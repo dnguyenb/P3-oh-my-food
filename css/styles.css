@@ -21,7 +21,7 @@
     opacity: 1;
   }
 }
-@keyframes check {
+@keyframes rotate {
   0% {
     transform: rotate(90deg);
   }
@@ -29,7 +29,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes show-up {
+@keyframes fade-in {
   0% {
     transform: translateY(1.5rem);
     opacity: 0;
@@ -39,29 +39,25 @@
     opacity: 1;
   }
 }
-@keyframes visible {
+@keyframes fade-out {
   0% {
     opacity: 1;
-    z-index: 1000;
+  }
+  90% {
+    opacity: 1;
+    z-index: 999;
   }
   100% {
-    opacity: 1;
-  }
-}
-@keyframes loading {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -999;
   }
 }
 @keyframes jump {
   from {
-    transform: translateY(-2rem);
+    transform: translateY(0rem);
   }
   to {
-    transform: translateY(0);
+    transform: translateY(-1rem);
   }
 }
 article,
@@ -347,66 +343,61 @@ p {
   font-size: 1.1rem;
 }
 
-.loader-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  animation: visible 4s ease-in-out both;
-  z-index: -1;
-}
-
 .loader {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 255, 255);
-  font-family: "Shrikhand", sans-serif;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 999;
+  animation: fade-out 4s 150ms ease-in-out both;
+}
+.loader .dot--1 {
+  top: -40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #99e2d0;
+  animation: jump 400ms 100ms ease-in-out backwards;
+}
+.loader .dot--2,
+.loader .dot--3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.loader .dot--2 {
+  margin-inline: 2rem;
+  background-color: #ff79da;
+  animation: jump 400ms 500ms ease-in-out backwards;
+}
+.loader .dot--3 {
+  background-color: #9356dc;
+  animation: jump 400ms 900ms ease-in-out backwards;
+}
+.loader .letters--1,
+.loader .letters--2,
+.loader .letters--3 {
+  margin-left: 1rem;
+  font-family: "shrikhand", sans-serif;
   font-size: 4rem;
+  opacity: 0;
 }
-.loader__item--1 {
-  color: #9356dc;
-  animation: jump 300ms;
-  animation-delay: 800s;
+.loader .letters--1 {
+  color: #99e2d0;
+  animation: fade-in 2s 1200ms both;
 }
-.loader__item--2 {
+.loader .letters--2 {
   color: #ff79da;
-  animation: jump 150ms;
-  animation-delay: 1100ms;
+  animation: fade-in 2s 1400ms both;
 }
-.loader__item--3 {
+.loader .letters--3 {
   color: #9356dc;
-  animation: jump 300ms;
-  animation-delay: 1250ms;
-}
-.loader__item--4 {
-  color: #ff79da;
-  animation: jump 150ms;
-  animation-delay: 1550ms;
-}
-.loader__item--5 {
-  color: #9356dc;
-  animation: jump 300ms;
-  animation-delay: 1700ms;
-}
-.loader__item--6 {
-  color: #ff79da;
-  animation: jump 150ms;
-  animation-delay: 2000ms;
-}
-.loader__item--7 {
-  color: #9356dc;
-  animation: jump 300ms;
-  animation-delay: 2150ms;
-}
-.loader__item--8 {
-  color: #ff79da;
-  animation: jump 150ms;
-  animation-delay: 2450ms;
+  animation: fade-in 2s 1600ms both;
 }
 
 header {
@@ -441,6 +432,7 @@ header .backButton {
   font-weight: 400;
   margin-bottom: 1.5rem;
   position: relative;
+  outline: none;
 }
 .footer__title:hover::before, .footer__title:focus::before {
   opacity: 1;
@@ -463,24 +455,19 @@ header .backButton {
   z-index: 1;
   font-size: 2rem;
   transition: all 100ms ease-in-out;
-  transition: transform 200ms;
+  transition: transform 150ms;
 }
 .footer__item {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+  display: flex;
 }
 .footer__item i {
   width: 20px;
   margin-right: 1.1rem;
   text-align: center;
 }
-.footer__item:focus, .footer__item:hover {
-  color: #ff79da;
-}
-.footer__item:focus i, .footer__item:hover i {
-  animation: like 600ms 200ms ease-in-out both;
-}
-.footer__item:active {
+.footer__item:focus, .footer__item:hover, .footer__item:active {
   color: #9356dc;
 }
 
@@ -489,12 +476,12 @@ header .backButton {
     text-align: center;
   }
   .footer__list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    gap: 3rem;
-    padding: 1rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .footer__item {
+    padding-left: 10rem;
   }
 }
 .location {
@@ -633,7 +620,8 @@ header .backButton {
   .howto__list {
     flex-flow: row nowrap;
     width: 100%;
-    gap: 3rem;
+    gap: 4rem;
+    padding-inline: 4rem;
   }
   .howto__list li {
     justify-content: space-evenly;
@@ -691,7 +679,7 @@ header .backButton {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
-    padding-inline: 4rem;
+    padding-inline: 10rem;
   }
 }
 
@@ -795,19 +783,7 @@ header .backButton {
   object-fit: cover;
 }
 
-.menu-wrapper {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .menu-wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-}
-
-.menu {
-  width: 100%;
+.menus {
   margin-top: -4rem;
   border-radius: 3.5rem 3.5rem 0 0;
   background-color: #f2f2f2;
@@ -818,21 +794,21 @@ header .backButton {
   flex-direction: row;
   flex-direction: column;
 }
-.menu__like {
+.menus__like {
   display: grid;
   place-content: center;
   width: 3rem;
   height: 3rem;
 }
-.menu__like .fa-regular {
+.menus__like .fa-regular {
   position: relative;
   cursor: pointer;
 }
-.menu__like .fa-regular:hover::after, .menu__like .fa-regular:focus::after, .menu__like .fa-regular:active::after {
+.menus__like .fa-regular:hover::after, .menus__like .fa-regular:focus::after, .menus__like .fa-regular:active::after {
   opacity: 1;
   animation: like 1000ms 100ms ease-in-out both;
 }
-.menu__like .fa-regular::after {
+.menus__like .fa-regular::after {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   position: absolute;
@@ -850,7 +826,7 @@ header .backButton {
   font-size: 2rem;
   transition: all 100ms ease-in-out;
 }
-.menu__title {
+.menus__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -860,19 +836,47 @@ header .backButton {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .menu__title {
+  .menus__title {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menus__title {
     width: 75%;
   }
 }
-.menu__title h2 {
+.menus__title h2 {
   font-family: "shrikhand", sans-serif;
   font-weight: 400;
 }
-.menu article {
+.menus .meals-wrapper {
+  width: 100%;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .menus .meals-wrapper {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menus .meals-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+  }
+}
+.menus article {
   padding-bottom: 2rem;
   width: 100%;
 }
-.menu article h3 {
+@media screen and (min-width: 1280px) {
+  .menus article {
+    width: 31%;
+  }
+}
+.menus article h3 {
   text-transform: uppercase;
   font-weight: 400;
   padding-bottom: 0.3rem;
@@ -880,7 +884,21 @@ header .backButton {
   width: 3rem;
   margin-bottom: 3rem;
 }
-.menu article .meals {
+.menus .meals__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .menus .meals__list {
+    justify-content: flex-start;
+  }
+}
+
+.meals {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -897,76 +915,77 @@ header .backButton {
   font-size: 1.17rem;
   background-color: #fff;
   border-radius: 1rem;
+  max-width: 100%;
   margin-bottom: 2rem;
   align-items: center;
-  max-height: 6rem;
   overflow: hidden;
-  animation: show-up 2000ms ease-in-out both;
+  height: 6rem;
+  animation: fade-in 2000ms ease-in-out both;
 }
-.menu article .meals:hover {
+.meals:hover {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
-.menu article .meals:nth-child(1) {
+.meals:nth-child(1) {
   animation-delay: 200ms;
 }
-.menu article .meals:nth-child(2) {
+.meals:nth-child(2) {
   animation-delay: 400ms;
 }
-.menu article .meals:nth-child(3) {
+.meals:nth-child(3) {
   animation-delay: 600ms;
 }
-.menu article .meals:nth-child(4) {
+.meals:nth-child(4) {
   animation-delay: 800ms;
 }
-.menu article .meals:nth-child(5) {
+.meals:nth-child(5) {
   animation-delay: 1000ms;
 }
-.menu article .meals:nth-child(6) {
+.meals:nth-child(6) {
   animation-delay: 1200ms;
 }
-.menu article .meals:nth-child(7) {
+.meals:nth-child(7) {
   animation-delay: 1400ms;
 }
-.menu article .meals:nth-child(8) {
+.meals:nth-child(8) {
   animation-delay: 1600ms;
 }
-.menu article .meals:nth-child(9) {
+.meals:nth-child(9) {
   animation-delay: 1800ms;
 }
-.menu article .meals:nth-child(10) {
+.meals:nth-child(10) {
   animation-delay: 2000ms;
 }
 @media screen and (min-width: 768px) {
-  .menu article .meals {
-    min-width: 18.2rem;
-    max-height: 12rem;
+  .meals {
+    max-width: 100%;
   }
 }
-.menu article .meals:hover .meals__selection, .menu article .meals:focus .meals__selection {
+.meals:hover .meals__selection, .meals:focus .meals__selection {
   margin-right: 0;
 }
-.menu article .meals:hover .meals__selection i, .menu article .meals:focus .meals__selection i {
-  animation: check 400ms 100ms ease-in-out both;
+.meals:hover .meals__selection i, .meals:focus .meals__selection i {
+  animation: rotate 400ms 100ms ease-in-out both;
 }
-.menu article .meals__info {
-  display: flex;
-  flex-direction: column;
+.meals__info {
   padding: 1rem;
+  min-width: 0;
 }
-.menu article .meals__selection {
-  width: 10rem;
-  height: 100%;
-  display: flex;
-  margin-right: -5rem;
+.meals__info h4,
+.meals__info p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.meals__selection {
   height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  margin-right: -5rem;
   transition: all 400ms ease-in-out;
 }
-@media screen and (min-width: 768px) {
-  .menu article .meals__selection {
-    height: 12rem;
-  }
-}
-.menu article .meals__selection-price {
+.meals__selection-price {
   font-size: 1.2rem;
   font-weight: 700;
   width: 5rem;
@@ -976,7 +995,8 @@ header .backButton {
   flex-direction: row;
   padding: 1rem;
 }
-.menu article .meals__selection-check {
+.meals__selection-check {
+  height: 6rem;
   font-size: 2rem;
   background-color: #99e2d0;
   color: white;
@@ -986,9 +1006,9 @@ header .backButton {
   flex-direction: row;
   width: 5rem;
   border-radius: 0 1rem 1rem 0;
-  overflow: hidden;
 }
-.menu .order-btn {
+
+.order-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1008,10 +1028,10 @@ header .backButton {
   width: 18rem;
   margin-bottom: 4rem;
 }
-.menu .order-btn:hover {
+.order-btn:hover {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
-.menu .order-btn:hover {
+.order-btn:hover {
   transform: scale(1.05);
   opacity: 0.75;
 }

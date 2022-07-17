@@ -3,8 +3,8 @@ $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $color-gradient: linear-gradient(to bottom right,
-                $color-secondary,
-                $color-primary);
+        $color-secondary,
+        $color-primary);
 
 // BACKGROUND COLORS
 $color-bg-light: #f2f2f2;
@@ -20,7 +20,7 @@ $font-text: "roboto";
 
 // MEDIA QUERIES
 $tablet-screen: "screen and (min-width: 768px)";
-$desktop-screen: "screen and (min-width: 992px)";
+$desktop-screen: "screen and (min-width: 1280px)";
 
 // ANIMATION
 $anim-dur: 2000ms;

@@ -9,6 +9,7 @@
         font-weight: 400;
         margin-bottom: 1.5rem;
         position: relative;
+        outline: none;
 
         &:hover,
         &:focus {
@@ -21,13 +22,14 @@
         &::before {
             content: "\f102";
             @include pseudo-element-gradient-icon;
-            transition: transform 200ms;
+            transition: transform 150ms;
         }
     }
 
     &__item {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
+        display: flex;
 
         i {
             width: 20px;
@@ -36,24 +38,12 @@
         }
 
         &:focus,
-        &:hover {
-            color: $color-secondary;
-
-            & i {
-                animation: like 600ms 200ms ease-in-out both;
-            }
-        }
-
+        &:hover,
         &:active {
             color: $color-primary;
         }
     }
 }
-
-// .fa-at,
-// .fa-info {
-//     display: none;
-// }
 
 @media #{$tablet-screen} {
 
@@ -64,9 +54,13 @@
         }
 
         &__list {
-            @include flex ($justify-content: center);
-            gap: 3rem;
-            padding: 1rem 6rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        &__item {
+            padding-left: 10rem;
         }
     }
 }
