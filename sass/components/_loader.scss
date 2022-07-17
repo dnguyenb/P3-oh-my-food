@@ -2,6 +2,7 @@
 
 .loader {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -29,7 +30,8 @@
     }
 
     .dot--2 {
-        margin-inline: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         background-color: $color-secondary;
         animation: jump 400ms 500ms ease-in-out backwards;
     }
@@ -39,28 +41,33 @@
         animation: jump 400ms 900ms ease-in-out backwards;
     }
 
-    .letters--1,
-    .letters--2,
-    .letters--3 {
-        margin-left: 1rem;
-        font-family: "shrikhand", sans-serif;
-        font-size: 4rem;
-        opacity: 0;
+    .letters {
+        display: flex;
+        margin-top: 2rem;
 
-    }
+        &--1,
+        &--2,
+        &--3 {
+            margin-left: 0.5rem;
+            font-family: "shrikhand", sans-serif;
+            font-size: 3rem;
+            opacity: 0;
 
-    .letters--1 {
-        color: $color-tertiary;
-        animation: fade-in 1s 1300ms both;
-    }
+        }
 
-    .letters--2 {
-        color: $color-secondary;
-        animation: fade-in 1s 1700ms both;
-    }
+        &--1 {
+            color: $color-tertiary;
+            animation: fade-in 1s 1300ms both;
+        }
 
-    .letters--3 {
-        color: $color-primary;
-        animation: fade-in 1s 2100ms both;
+        &--2 {
+            color: $color-secondary;
+            animation: fade-in 1s 1700ms both;
+        }
+
+        &--3 {
+            color: $color-primary;
+            animation: fade-in 1s 2100ms both;
+        }
     }
 }

@@ -76,11 +76,19 @@
 }
 
 @keyframes jump {
-    from {
-        transform: translateY(0rem);
+    0% {
+        transform: translateX(0rem);
+    }
+
+    25% {
+        transform: translateX(-2rem);
+    }
+
+    50% {
+        transform: translateX(2rem);
     }
 
     to {
-        transform: translateY(-1rem);
+        transform: translateX(0rem);
     }
 }
