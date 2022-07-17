@@ -283,7 +283,7 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  min-width: 420px;
+  min-width: 320px;
   min-height: 100vh;
   font-family: "roboto", sans-serif;
 }
@@ -354,10 +354,9 @@ p {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
   z-index: 999;
-  animation: fade-out 4s 150ms ease-in-out both;
+  animation: fade-out 3500ms ease-in-out both;
 }
 .loader .dot--1 {
-  top: -40px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -389,15 +388,15 @@ p {
 }
 .loader .letters--1 {
   color: #99e2d0;
-  animation: fade-in 2s 1200ms both;
+  animation: fade-in 1s 1300ms both;
 }
 .loader .letters--2 {
   color: #ff79da;
-  animation: fade-in 2s 1400ms both;
+  animation: fade-in 1s 1700ms both;
 }
 .loader .letters--3 {
   color: #9356dc;
-  animation: fade-in 2s 1600ms both;
+  animation: fade-in 1s 2100ms both;
 }
 
 header {
@@ -964,7 +963,7 @@ header .backButton {
   margin-right: 0;
 }
 .meals:hover .meals__selection i, .meals:focus .meals__selection i {
-  animation: rotate 400ms 100ms ease-in-out both;
+  animation: rotate 300ms 100ms ease-in-out both;
 }
 .meals__info {
   padding: 1rem;

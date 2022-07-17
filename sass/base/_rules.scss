@@ -13,7 +13,7 @@ html {
 body {
 	@include flex($flex-direction: column);
 	width: 100%;
-	min-width: 420px;
+	min-width: 320px;
 	min-height: 100vh;
 	font-family: $font-text, sans-serif;
 

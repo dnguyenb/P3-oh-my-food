@@ -11,15 +11,13 @@
     height: 100%;
     background-color: rgba(255, 255, 255, 0.90);
     z-index: 999;
-    animation: fade-out 4s 150ms ease-in-out both;
+    animation: fade-out 3500ms ease-in-out both;
 
     .dot--1 {
-        top: -40px;
         width: 40px;
         height: 40px;
         border-radius: 50%;
         background-color: $color-tertiary;
-        // animation: dotWindmill 1s infinite linear;
         animation: jump 400ms 100ms ease-in-out backwards;
     }
 
@@ -53,16 +51,16 @@
 
     .letters--1 {
         color: $color-tertiary;
-        animation: fade-in 2s 1200ms both;
+        animation: fade-in 1s 1300ms both;
     }
 
     .letters--2 {
         color: $color-secondary;
-        animation: fade-in 2s 1400ms both;
+        animation: fade-in 1s 1700ms both;
     }
 
     .letters--3 {
         color: $color-primary;
-        animation: fade-in 2s 1600ms both;
+        animation: fade-in 1s 2100ms both;
     }
 }
