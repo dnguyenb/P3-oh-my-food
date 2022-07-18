@@ -75,7 +75,7 @@
     }
 }
 
-@keyframes jump {
+@keyframes slide {
     0% {
         transform: translateX(0rem);
     }
@@ -84,11 +84,11 @@
         transform: translateX(-2rem);
     }
 
-    50% {
+    100% {
         transform: translateX(2rem);
     }
 
-    to {
-        transform: translateX(0rem);
-    }
+    // 100% {
+    //     transform: translateX(0rem);
+    // }
 }

@@ -90,22 +90,23 @@
         li {
             @include howto-label;
             position: relative;
+            white-space: nowrap;
 
             i {
                 opacity: 0.5;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
             }
         }
 
         @media #{$tablet-screen} {
+            justify-content: center;
             flex-flow: row nowrap;
             width: 100%;
-            gap: 4rem;
-            padding-inline: 4rem;
+            gap: 2.5rem;
 
             li {
                 justify-content: space-evenly;
-                width: 31%;
+                width: 25%;
             }
         }
 

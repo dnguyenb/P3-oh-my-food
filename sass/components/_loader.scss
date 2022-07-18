@@ -19,7 +19,7 @@
         height: 40px;
         border-radius: 50%;
         background-color: $color-tertiary;
-        animation: jump 400ms 100ms ease-in-out backwards;
+        animation: slide 400ms 200ms infinite linear;
     }
 
     .dot--2,
@@ -33,12 +33,12 @@
         margin-top: 2rem;
         margin-bottom: 2rem;
         background-color: $color-secondary;
-        animation: jump 400ms 500ms ease-in-out backwards;
+        animation: slide 400ms 300ms infinite linear;
     }
 
     .dot--3 {
         background-color: $color-primary;
-        animation: jump 400ms 900ms ease-in-out backwards;
+        animation: slide 400ms 400ms infinite linear;
     }
 
     .letters {

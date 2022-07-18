@@ -2,11 +2,11 @@
     @include base-btn;
     justify-content: flex-start;
     border-radius: 1.5rem;
-    padding: 2rem 2.5rem;
+    padding: 2rem;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     background-color: $color-bg-light;
-    gap: 1.8rem;
+    gap: 1rem;
 }
 
 @mixin menu-label {
