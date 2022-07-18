@@ -334,16 +334,12 @@ h3 {
 }
 
 h4 {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
 }
 
 h3,
 h4 {
   margin-bottom: 0.5rem;
-}
-
-p {
-  font-size: 1.1rem;
 }
 
 .loader {
@@ -970,14 +966,25 @@ header .backButton {
   animation: rotate 300ms 100ms ease-in-out both;
 }
 .meals__info {
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
   min-width: 0;
+}
+.meals__info p {
+  font-size: 0.7rem;
 }
 .meals__info h4,
 .meals__info p {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+@media screen and (min-width: 768px) {
+  .meals__info h4 {
+    font-size: 1.2rem;
+  }
+  .meals__info p {
+    font-size: 1rem;
+  }
 }
 .meals__selection {
   height: 6rem;
@@ -989,18 +996,19 @@ header .backButton {
   transition: all 400ms ease-in-out;
 }
 .meals__selection-price {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   width: 5rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   flex-direction: row;
-  padding: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
 }
 .meals__selection-check {
   height: 6rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: #99e2d0;
   color: white;
   display: flex;
@@ -1009,6 +1017,14 @@ header .backButton {
   flex-direction: row;
   width: 5rem;
   border-radius: 0 1rem 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .meals__selection-price {
+    font-size: 1.2rem;
+  }
+  .meals__selection-check {
+    font-size: 2rem;
+  }
 }
 
 .order-btn {
