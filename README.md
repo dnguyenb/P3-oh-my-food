@@ -5,7 +5,7 @@ Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet
 
 Objectifs :
 
-Mettre en place une structure de navigation pour un site web Mettre en place son environnement Front-End Utiliser un système de gestion de versions pour le suivi du projet et son hébergement Mettre en œuvre des effets CSS graphiques avancés Assurer la cohérence graphique d'un site web 15982605908418_Maquettes Ohmyfood
+Mettre en place une structure de navigation pour un site web Mettre en place son environnement Front-End Utiliser un système de gestion de versions pour le suivi du projet et son hébergement Mettre en œuvre des effets CSS graphiques avancés Assurer la cohérence graphique d'un site web
 
 ![15982605908418_Maquettes Ohmyfood](https://user-images.githubusercontent.com/101462601/179559442-5d20540f-4bd0-4386-8752-a4bc88b13bd1.jpg)
 
