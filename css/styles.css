@@ -286,7 +286,7 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  min-width: 330px;
+  min-width: 360px;
   min-height: 100vh;
   font-family: "roboto", sans-serif;
 }
@@ -334,7 +334,7 @@ h3 {
 }
 
 h4 {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 h3,
@@ -393,7 +393,7 @@ header {
 }
 header .backButton {
   position: absolute;
-  left: 3rem;
+  left: 4rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
@@ -533,7 +533,6 @@ header .backButton:hover, header .backButton:focus {
   justify-content: center;
   flex-direction: row;
   cursor: pointer;
-  border-radius: 1.5rem;
   border: none;
   min-width: 17rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
@@ -576,7 +575,6 @@ header .backButton:hover, header .backButton:focus {
   justify-content: center;
   flex-direction: row;
   cursor: pointer;
-  border-radius: 1.5rem;
   border: none;
   min-width: 17rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
@@ -675,7 +673,6 @@ header .backButton:hover, header .backButton:focus {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 1rem;
   font-weight: 700;
   color: #278870;
   padding: 0.5rem 0.8rem;
@@ -823,7 +820,7 @@ header .backButton:hover, header .backButton:focus {
     width: 50%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1240px) {
   .menus__title {
     width: 75%;
   }
@@ -841,7 +838,7 @@ header .backButton:hover, header .backButton:focus {
     width: 50%;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1240px) {
   .menus .meals-wrapper {
     display: flex;
     flex-direction: row;
@@ -854,7 +851,7 @@ header .backButton:hover, header .backButton:focus {
   padding-bottom: 2rem;
   width: 100%;
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1240px) {
   .menus article {
     width: 31%;
   }
@@ -867,19 +864,6 @@ header .backButton:hover, header .backButton:focus {
   width: 3rem;
   margin-bottom: 3rem;
 }
-.menus .meals__list {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .menus .meals__list {
-    justify-content: flex-start;
-  }
-}
 
 .meals {
   display: flex;
@@ -887,15 +871,12 @@ header .backButton:hover, header .backButton:focus {
   justify-content: center;
   flex-direction: row;
   cursor: pointer;
-  border-radius: 1.5rem;
   border: none;
   min-width: 17rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
   transition: all 400ms ease-in-out;
   justify-content: space-between;
   align-items: flex-end;
-  font-weight: 400;
-  font-size: 1.17rem;
   background-color: #fff;
   border-radius: 1rem;
   max-width: 100%;
@@ -943,6 +924,11 @@ header .backButton:hover, header .backButton:focus {
     max-width: 100%;
   }
 }
+@media screen and (min-width: 1240px) {
+  .meals {
+    max-width: 30rem;
+  }
+}
 .meals:hover .meals__selection, .meals:focus .meals__selection {
   margin-right: 0;
 }
@@ -954,7 +940,7 @@ header .backButton:hover, header .backButton:focus {
   min-width: 0;
 }
 .meals__info p {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 .meals__info h4,
 .meals__info p {
@@ -1017,7 +1003,6 @@ header .backButton:hover, header .backButton:focus {
   justify-content: center;
   flex-direction: row;
   cursor: pointer;
-  border-radius: 1.5rem;
   border: none;
   min-width: 17rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);

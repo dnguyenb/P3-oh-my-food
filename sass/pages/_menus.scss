@@ -85,22 +85,6 @@
             width: 3rem;
             margin-bottom: 3rem;
         }
-
-
-    }
-
-    .meals__list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 1rem;
-
-        @media #{$tablet-screen} {
-            justify-content: flex-start;
-
-        }
     }
 }
 
@@ -123,6 +107,10 @@
         max-width: 100%;
     }
 
+    @media #{$desktop-screen} {
+        max-width: 30rem;
+    }
+
     &:hover,
     &:focus {
         .meals__selection {
@@ -140,7 +128,7 @@
         min-width: 0;
 
         p {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
         }
 
         h4,

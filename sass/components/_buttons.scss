@@ -1,7 +1,6 @@
-@mixin base-btn {
+@mixin base-btn-label {
     @include flex;
     cursor: pointer;
-    border-radius: 1.5rem;
     border: none;
     min-width: 17rem;
     @include shadow;
@@ -9,7 +8,7 @@
 }
 
 @mixin pink-btn {
-    @include base-btn;
+    @include base-btn-label;
     font-weight: 700;
     font-size: 1.3rem;
     border-radius: 2rem;
@@ -25,7 +24,7 @@
 
 @mixin back-btn {
     position: absolute;
-    left: 3rem;
+    left: 4rem;
     top: 50%;
     transform: translateY(-50%);
     font-size: 2rem;
