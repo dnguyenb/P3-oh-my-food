@@ -286,7 +286,7 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  min-width: 320px;
+  min-width: 330px;
   min-height: 100vh;
   font-family: "roboto", sans-serif;
 }
@@ -944,14 +944,14 @@ header .backButton:hover, header .backButton:focus {
   }
 }
 .meals:hover .meals__selection, .meals:focus .meals__selection {
-  transform: translateX(0);
+  margin-right: 0;
 }
 .meals:hover .meals__selection i, .meals:focus .meals__selection i {
   animation: rotate 300ms 100ms ease-in-out both;
 }
 .meals__info {
   padding: 1rem 0 1rem 1rem;
-  min-width: 50%;
+  min-width: 0;
 }
 .meals__info p {
   font-size: 0.7rem;
@@ -976,13 +976,13 @@ header .backButton:hover, header .backButton:focus {
   justify-content: center;
   align-items: flex-end;
   flex-wrap: nowrap;
-  transform: translateX(4rem);
+  margin-right: -5rem;
   transition: all 400ms ease-in-out;
 }
 .meals__selection-price {
   font-size: 1rem;
   font-weight: 700;
-  width: 4rem;
+  width: 5rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -999,7 +999,7 @@ header .backButton:hover, header .backButton:focus {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 4rem;
+  width: 5rem;
   border-radius: 0 1rem 1rem 0;
 }
 @media screen and (min-width: 768px) {

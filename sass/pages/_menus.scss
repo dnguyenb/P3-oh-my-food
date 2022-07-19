@@ -127,7 +127,7 @@
     &:focus {
         .meals__selection {
 
-            transform: translateX(0);
+            margin-right: 0;
 
             i {
                 animation: rotate 300ms 100ms ease-in-out both;
@@ -137,7 +137,7 @@
 
     &__info {
         padding: 1rem 0 1rem 1rem;
-        min-width: 50%;
+        min-width: 0;
 
         p {
             font-size: 0.7rem;
@@ -168,13 +168,13 @@
         justify-content: center;
         align-items: flex-end;
         flex-wrap: nowrap;
-        transform: translateX(4rem);
+        margin-right: -5rem;
         transition: all 400ms ease-in-out;
 
         &-price {
             font-size: 1rem;
             font-weight: 700;
-            width: 4rem;
+            width: 5rem;
             @include flex($align-items: flex-end);
             padding-bottom: 1rem;
             padding-right: 1rem;
@@ -186,7 +186,7 @@
             background-color: $color-tertiary;
             color: white;
             @include flex;
-            width: 4rem;
+            width: 5rem;
             border-radius: 0 1rem 1rem 0;
         }
 
