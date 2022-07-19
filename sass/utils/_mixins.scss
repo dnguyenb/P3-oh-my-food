@@ -20,7 +20,7 @@
 @mixin shadow {
     box-shadow: 0 3px 6px $color-shadow;
 
-    &:hover {
+    &:hover, &:focus {
         box-shadow: 0 19px 38px darken($color-shadow, 100%);
     }
 }

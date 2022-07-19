@@ -8,5 +8,9 @@
 
 		.backButton {
 			@include back-btn;
+
+			&:hover, &:focus {
+				color: $color-primary;
+			}
 	}
 }

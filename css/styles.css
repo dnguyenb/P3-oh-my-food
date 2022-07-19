@@ -52,15 +52,15 @@
     z-index: -999;
   }
 }
-@keyframes slide {
+@keyframes jump {
   0% {
-    transform: translateX(0rem);
+    transform: translateY(0rem);
   }
   25% {
-    transform: translateX(-2rem);
+    transform: translateY(-1.2rem);
   }
   100% {
-    transform: translateX(2rem);
+    transform: translateY(1.2rem);
   }
 }
 article,
@@ -344,7 +344,6 @@ h4 {
 
 .loader {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -352,54 +351,33 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   z-index: 999;
-  animation: fade-out 3500ms ease-in-out both;
+  animation: fade-out 3000ms ease-in-out both;
 }
 .loader .dot--1 {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #99e2d0;
-  animation: slide 400ms 200ms infinite linear;
+  animation: jump 500ms 200ms infinite linear;
 }
 .loader .dot--2,
 .loader .dot--3 {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 .loader .dot--2 {
   margin-top: 2rem;
   margin-bottom: 2rem;
   background-color: #ff79da;
-  animation: slide 400ms 300ms infinite linear;
+  animation: jump 500ms 300ms infinite linear;
+  margin-inline: 2rem;
 }
 .loader .dot--3 {
   background-color: #9356dc;
-  animation: slide 400ms 400ms infinite linear;
-}
-.loader .letters {
-  display: flex;
-  margin-top: 2rem;
-}
-.loader .letters--1, .loader .letters--2, .loader .letters--3 {
-  margin-left: 0.5rem;
-  font-family: "shrikhand", sans-serif;
-  font-size: 3rem;
-  opacity: 0;
-}
-.loader .letters--1 {
-  color: #99e2d0;
-  animation: fade-in 1s 1300ms both;
-}
-.loader .letters--2 {
-  color: #ff79da;
-  animation: fade-in 1s 1700ms both;
-}
-.loader .letters--3 {
-  color: #9356dc;
-  animation: fade-in 1s 2100ms both;
+  animation: jump 500ms 400ms infinite linear;
 }
 
 header {
@@ -418,9 +396,12 @@ header .backButton {
   left: 3rem;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.5rem;
-  opacity: 0.8;
+  font-size: 2rem;
+  opacity: 0.7;
   margin-left: -1.5rem;
+}
+header .backButton:hover, header .backButton:focus {
+  color: #9356dc;
 }
 
 .footer {
@@ -430,15 +411,18 @@ header .backButton {
 }
 .footer__title {
   font-family: "shrikhand";
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 1.5rem;
   position: relative;
   outline: none;
 }
+.footer__title:hover, .footer__title:focus {
+  color: #9356dc;
+}
 .footer__title:hover::before, .footer__title:focus::before {
   opacity: 1;
-  transform: translateY(-90%);
+  transform: translateY(-60%);
 }
 .footer__title::before {
   content: "\f102";
@@ -505,7 +489,7 @@ header .backButton {
   background-color: #e4e4e4;
   font-weight: 700;
   padding-left: 0.5rem;
-  width: 10rem;
+  width: 12rem;
   max-width: 100%;
   height: 2.5rem;
   font-size: 1.12rem;
@@ -521,10 +505,9 @@ header .backButton {
   border: none;
   border-radius: 0 0.75rem 0.75rem 0;
   background-color: #e4e4e4;
-  display: none;
 }
 .location__button i {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .explore {
@@ -562,7 +545,7 @@ header .backButton {
   color: #fff;
   background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
-.explore__btn:hover {
+.explore__btn:hover, .explore__btn:focus {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .explore__btn:hover {
@@ -608,7 +591,7 @@ header .backButton {
   position: relative;
   white-space: nowrap;
 }
-.howto__list li:hover {
+.howto__list li:hover, .howto__list li:focus {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .howto__list li i {
@@ -702,12 +685,13 @@ header .backButton {
 .card {
   width: 100%;
   border-radius: 1.3rem;
+  background-color: #fff;
   position: relative;
   overflow: hidden;
   transition: all 400ms;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
 }
-.card:hover {
+.card:hover, .card:focus {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .card__link {
@@ -767,8 +751,8 @@ header .backButton {
   transition: all 100ms ease-in-out;
 }
 
-.card:focus::before,
-.card:hover::before {
+.card:hover::before,
+.card:focus::before {
   animation: shake 150ms 200ms ease-in-out;
   animation-iteration-count: 4;
 }
@@ -863,7 +847,7 @@ header .backButton {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 }
 .menus article {
@@ -921,7 +905,7 @@ header .backButton {
   height: 6rem;
   animation: fade-in 2000ms ease-in-out both;
 }
-.meals:hover {
+.meals:hover, .meals:focus {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .meals:nth-child(1) {
@@ -960,14 +944,14 @@ header .backButton {
   }
 }
 .meals:hover .meals__selection, .meals:focus .meals__selection {
-  margin-right: 0;
+  transform: translateX(0);
 }
 .meals:hover .meals__selection i, .meals:focus .meals__selection i {
   animation: rotate 300ms 100ms ease-in-out both;
 }
 .meals__info {
   padding: 1rem 0 1rem 1rem;
-  min-width: 0;
+  min-width: 50%;
 }
 .meals__info p {
   font-size: 0.7rem;
@@ -992,13 +976,13 @@ header .backButton {
   justify-content: center;
   align-items: flex-end;
   flex-wrap: nowrap;
-  margin-right: -5rem;
+  transform: translateX(4rem);
   transition: all 400ms ease-in-out;
 }
 .meals__selection-price {
   font-size: 1rem;
   font-weight: 700;
-  width: 5rem;
+  width: 4rem;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1015,7 +999,7 @@ header .backButton {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 5rem;
+  width: 4rem;
   border-radius: 0 1rem 1rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -1047,7 +1031,7 @@ header .backButton {
   width: 18rem;
   margin-bottom: 4rem;
 }
-.order-btn:hover {
+.order-btn:hover, .order-btn:focus {
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.4);
 }
 .order-btn:hover {

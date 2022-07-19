@@ -5,7 +5,7 @@
 
     &__title {
         font-family: $font-title;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         font-weight: 400;
         margin-bottom: 1.5rem;
         position: relative;
@@ -13,9 +13,12 @@
 
         &:hover,
         &:focus {
+
+            color: $color-primary;
+            
             &::before {
                 opacity: 1;
-                transform: translateY(-90%);
+                transform: translateY(-60%);
             }
         }
 
