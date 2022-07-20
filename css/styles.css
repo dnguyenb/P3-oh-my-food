@@ -415,33 +415,6 @@ header .backButton:hover, header .backButton:focus {
   font-weight: 400;
   margin-bottom: 1.5rem;
   position: relative;
-  outline: none;
-}
-.footer__title:hover, .footer__title:focus {
-  color: #9356dc;
-}
-.footer__title:hover::before, .footer__title:focus::before {
-  opacity: 1;
-  transform: translateY(-60%);
-}
-.footer__title::before {
-  content: "\f102";
-  font-family: "Font Awesome 6 Free";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: 700;
-  opacity: 0;
-  z-index: 1;
-  font-size: 2rem;
-  transition: all 100ms ease-in-out;
-  transition: transform 150ms;
 }
 .footer__item {
   font-size: 1.3rem;
@@ -624,8 +597,8 @@ header .backButton:hover, header .backButton:focus {
   color: #fff;
   font-size: 1rem;
 }
-.howto__list li:hover,
-.howto__list li:focus {
+.howto__list li:focus,
+.howto__list li:hover {
   background-color: #f2eafb;
 }
 .howto__list li:hover > i,

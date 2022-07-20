@@ -9,24 +9,6 @@
         font-weight: 400;
         margin-bottom: 1.5rem;
         position: relative;
-        outline: none;
-
-        &:hover,
-        &:focus {
-
-            color: $color-primary;
-            
-            &::before {
-                opacity: 1;
-                transform: translateY(-60%);
-            }
-        }
-
-        &::before {
-            content: "\f102";
-            @include pseudo-element-gradient-icon;
-            transition: transform 150ms;
-        }
     }
 
     &__item {
