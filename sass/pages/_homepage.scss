@@ -181,7 +181,6 @@
     position: relative;
     overflow: hidden;
     transition: all 400ms;
-
     @include shadow;
 
     &__link {
@@ -213,7 +212,6 @@
         }
     }
 }
-
 
 .card:hover,
 .card:focus {
